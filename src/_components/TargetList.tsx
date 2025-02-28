@@ -5,6 +5,7 @@ import { updateSearchedAt, updateSeenAt, updateCapturedAt } from "@/localserver/
 import { ResetDatabase } from "@/_components/ResetDatabase";
 import { IconSearch, IconSkull, IconCheck, IconEye, IconEyeBlind, IconLink } from "@/_components/Icons";
 import { formatDate } from "@/_utils/helpers";
+import { toast } from "sonner";
 
 export function TargetList() {
   const [showCaptured, setShowCaptured] = useState(true);

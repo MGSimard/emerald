@@ -169,6 +169,13 @@ details ul,
 details ol {
   padding-left: 1rem;
 }
+.sonner-card {
+  font-family: var(--GeistMono-and-fallbacks);
+  color: inherit;
+  background-color: var(--clrBg) !important;
+  border: 1px solid var(--clrBorder) !important;
+  border-radius: 0.4rem;
+}
 /* HELPERS */
 .btn {
   display: flex;
