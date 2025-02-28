@@ -19,9 +19,23 @@ export async function updateSeenAt(targetId: number) {
 }
 
 export async function updateCapturedAt(targetId: number) {
+  // If null add new Date
+  // If not null set to null
+  // USE A TRANSACTION
+
   try {
-    const success = await db.targets.update(targetId, { capturedAt: new Date() });
-    if (!success) throw new Error("DATABASE ERROR: Failed updating captured date.");
+    await db.transaction("rw", db.targets, async () => {
+      const target = await db.targets.get(targetId);
+      if (!target) throw new Error("DATABASE ERROR: Target ID not found.");
+
+      if (target.capturedAt) {
+        const success = await db.targets.update(targetId, { capturedAt: null });
+        if (!success) throw new Error("DATABASE ERROR: Failed updating captured date.");
+      } else {
+        const success = await db.targets.update(targetId, { capturedAt: new Date() });
+        if (!success) throw new Error("DATABASE ERROR: Failed updating captured date.");
+      }
+    });
   } catch (err: unknown) {
     alert(err instanceof Error ? err.message : "UNKNOWN ERROR.");
   }

@@ -152,6 +152,9 @@ details ol {
   border: 1px solid var(--clrBorder);
   border-radius: 0.4rem;
 }
+.btn > * {
+  flex-shrink: 0;
+}
 .btn:hover {
   background-color: var(--clrBgLight);
 }
@@ -204,6 +207,9 @@ details ol {
   align-items: stretch;
   border-radius: 0.4rem;
 }
+.target-captured {
+  opacity: 0.5;
+}
 .target-card * {
   border: 1px solid rgba(255, 0, 0, 0.5);
 }
@@ -222,6 +228,13 @@ details ol {
 .target-card-right {
   border: 2px solid green !important;
   flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.target-metadata {
+  word-break: break-word;
 }
 .target-zone {
 }
@@ -229,7 +242,17 @@ details ol {
   color: var(--clrDetail);
 }
 .target-actions {
+  flex-shrink: 0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   justify-content: space-between;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+.target-actions button {
+  justify-content: flex-end;
+}
+.target-actions button svg {
+  font-size: 1.4em;
 }

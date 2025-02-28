@@ -21,7 +21,7 @@ function TargetCard({ target }: { target: Target }) {
   const { id, name, level, zone, subzone, searchedAt, seenAt, capturedAt, updatedAt } = target;
 
   return (
-    <li className="target-card">
+    <li className={`target-card${capturedAt ? " target-captured" : ""}`}>
       <div className="target-card-left">
         <span className="target-level">Nv.{level}</span>
       </div>
@@ -33,16 +33,16 @@ function TargetCard({ target }: { target: Target }) {
         </div>
         <div className="target-actions">
           <button className="btn" type="button" onClick={() => updateSearchedAt(id)}>
-            <IconSearch />
             {formatDate(searchedAt)}
+            <IconSearch />
           </button>
           <button className="btn" type="button" onClick={() => updateSeenAt(id)}>
-            <IconSkull />
             {formatDate(seenAt)}
+            <IconSkull />
           </button>
           <button className="btn" type="button" onClick={() => updateCapturedAt(id)}>
-            <IconCheck />
             {formatDate(capturedAt)}
+            <IconCheck />
           </button>
         </div>
       </div>
