@@ -2,7 +2,8 @@ import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { routeTree } from "@/routeTree.gen";
-import { ThemeContextProvider } from "./_components/ThemeContext";
+import { ThemeContextProvider } from "@/_components/ThemeContext";
+import { Error, NotFound } from "@/_components/NotFoundError";
 import "@/_styles/global.css";
 import "@/_styles/fonts/fonts.css";
 
@@ -11,6 +12,8 @@ const router = createRouter({
   defaultPreload: "intent",
   scrollRestoration: true,
   defaultStructuralSharing: true,
+  defaultNotFoundComponent: NotFound,
+  defaultErrorComponent: Error,
 });
 
 declare module "@tanstack/react-router" {

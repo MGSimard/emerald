@@ -97,6 +97,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: var(--GeistMono-and-fallbacks);
   font-weight: 400;
   color: var(--clrHeading);
 }
@@ -118,7 +119,8 @@ ol {
 }
 button {
   all: unset;
-  font-family: inherit;
+  text-transform: uppercase;
+  font-family: var(--GeistMono-and-fallbacks);
   color: inherit;
   cursor: pointer;
 }
@@ -143,7 +145,6 @@ details ol {
 /* HELPERS */
 .btn {
   padding: 1rem 2rem;
-  text-transform: uppercase;
   background-color: var(--clrBg);
   border: 1px solid var(--clrBorder);
   border-radius: 0.4rem;
@@ -152,6 +153,7 @@ details ol {
   background-color: var(--clrBgLight);
 }
 .btn-primary {
+  font-weight: 700;
   color: var(--clrHeading);
   background-color: var(--clrPrimary);
 }
