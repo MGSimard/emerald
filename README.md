@@ -2,7 +2,6 @@
 
 ## Task List
 
-- [ ] Add fonts
 - [ ] Finalize colors
 - [ ] ...
 - [ ] ...
