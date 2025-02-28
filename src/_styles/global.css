@@ -101,6 +101,12 @@ h6 {
   font-weight: 400;
   color: var(--clrHeading);
 }
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.6rem;
+}
 img,
 svg {
   display: block;
