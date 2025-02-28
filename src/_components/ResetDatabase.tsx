@@ -1,5 +1,11 @@
 import { resetDatabase } from "@/localserver/actions";
 
 export function ResetDatabase() {
-  return <button onClick={resetDatabase}>Reset Database</button>;
+  // TODO When we implemented sonner set up a confirmation setup for this
+
+  return (
+    <button className="btn" type="button" onClick={resetDatabase}>
+      Reset
+    </button>
+  );
 }

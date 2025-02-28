@@ -237,8 +237,6 @@ details ol {
 .target-metadata {
   word-break: break-word;
 }
-.target-zone {
-}
 .target-subzone {
   color: var(--clrDetail);
 }
