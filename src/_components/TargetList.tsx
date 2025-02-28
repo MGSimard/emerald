@@ -25,7 +25,7 @@ export function TargetList() {
 }
 
 function TargetCard({ target }: { target: Target }) {
-  const { id, name, level, zone, subzone, wiki, searchedAt, seenAt, capturedAt, updatedAt } = target;
+  const { id, name, level, zone, subzone, wiki, searchedAt, seenAt, capturedAt } = target;
 
   return (
     <li className={`target-card${capturedAt ? " target-captured" : ""}`}>
