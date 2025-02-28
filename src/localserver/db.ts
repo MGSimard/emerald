@@ -23,7 +23,7 @@ const db = new Dexie("BountyDatabase") as Dexie & {
 
 // Define schema (Declare indexes, not all columns)
 db.version(1).stores({
-  targets: "&id",
+  targets: "++id",
 });
 
 // Prepare data by adding missing columns

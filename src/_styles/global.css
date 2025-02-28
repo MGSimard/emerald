@@ -232,6 +232,7 @@ details ol {
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
+  padding: 1rem;
 }
 .target-metadata {
   word-break: break-word;
@@ -247,6 +248,7 @@ details ol {
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
+  gap: 0.5rem;
   font-size: 1.2rem;
   white-space: nowrap;
 }

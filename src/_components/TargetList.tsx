@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useLiveQuery } from "dexie-react-hooks";
 import { db, type Target } from "@/localserver/db";
 import { updateSearchedAt, updateSeenAt, updateCapturedAt } from "@/localserver/actions";
@@ -8,9 +9,16 @@ export function TargetList() {
   const targets = useLiveQuery(() => db.targets.toArray());
   if (!targets || targets.length <= 0) return <div>Target list empty.</div>;
 
+  // Sort targets by level, secondary (for monsters that have the same level) by ID.
+  // I think the secondary ID sorting for similar levels already happens because
+  // the database is already returned in ID ordering?
+  const sortedTargets = [...targets].sort((a, b) => {
+    return a.level - b.level;
+  });
+
   return (
     <ul id="target-list">
-      {targets.map((target) => (
+      {sortedTargets.map((target) => (
         <TargetCard key={target.id} target={target} />
       ))}
     </ul>
@@ -18,7 +26,7 @@ export function TargetList() {
 }
 
 function TargetCard({ target }: { target: Target }) {
-  const { id, name, level, zone, subzone, searchedAt, seenAt, capturedAt, updatedAt } = target;
+  const { id, name, level, zone, subzone, wiki, searchedAt, seenAt, capturedAt, updatedAt } = target;
 
   return (
     <li className={`target-card${capturedAt ? " target-captured" : ""}`}>
@@ -27,7 +35,11 @@ function TargetCard({ target }: { target: Target }) {
       </div>
       <div className="target-card-right">
         <div className="target-metadata">
-          <h3 className="target-name">{name}</h3>
+          <h3 className="target-name">
+            <a href={wiki.toString()} target="_blank">
+              {name}
+            </a>
+          </h3>
           <span className="target-zone">{zone}</span>
           <span className="target-subzone">/ {subzone}</span>
         </div>
