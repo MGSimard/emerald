@@ -4,6 +4,7 @@
     "level": 20,
     "zone": "Astrub",
     "subzone": "Cité d'Astrub",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-fouduglen-l-ecureuil.html"
   },
   {
@@ -11,6 +12,7 @@
     "level": 20,
     "zone": "Astrub",
     "subzone": "Prairies d'Astrub",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-sam-sagaz.html"
   },
   {
@@ -18,6 +20,7 @@
     "level": 30,
     "zone": "Astrub",
     "subzone": "Forêt d'Astrub",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-frakacia-leukocytine.html"
   },
   {
@@ -25,6 +28,7 @@
     "level": 30,
     "zone": "Amakna",
     "subzone": "Champ des Ingalsses",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-les-guman.html"
   },
   {
@@ -32,6 +36,7 @@
     "level": 30,
     "zone": "Amakna",
     "subzone": "Bord de la forêt maléfique",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-maitre-boulet.html"
   },
   {
@@ -39,6 +44,7 @@
     "level": 40,
     "zone": "Amakna",
     "subzone": "Cimetière",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-roub-ignolles.html"
   },
   {
@@ -46,6 +52,7 @@
     "level": 50,
     "zone": "Plaines de Cania",
     "subzone": "Plaine des Porkass",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-bouss-baybe.html"
   },
   {
@@ -53,6 +60,7 @@
     "level": 50,
     "zone": "Brâkmar",
     "subzone": "Bordure de Brâkmar",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-ogivol-scalarcin.html"
   },
   {
@@ -60,6 +68,7 @@
     "level": 60,
     "zone": "Landes de Sidimote",
     "subzone": "Désolation de Sidimote",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-brumen-tinctorias.html"
   },
   {
@@ -67,6 +76,7 @@
     "level": 60,
     "zone": "Montagne des Koalaks",
     "subzone": "Marécages sans fond",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-gadoo.html"
   },
   {
@@ -74,6 +84,7 @@
     "level": 60,
     "zone": "Plaines de Cania",
     "subzone": "Massif de Cania",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-marzwel-le-gobelin.html"
   },
   {
@@ -81,6 +92,7 @@
     "level": 60,
     "zone": "Île des Wabbits",
     "subzone": "Îlot de la Couronne",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-nono-le-wobot.html"
   },
   {
@@ -88,6 +100,7 @@
     "level": 70,
     "zone": "Île d'Otomaï",
     "subzone": "Arche d'Otomaï",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-armada-l-invincible.html"
   },
   {
@@ -95,6 +108,7 @@
     "level": 70,
     "zone": "Brâkmar",
     "subzone": "Cimetière des Torturés",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-qil-bil.html"
   },
   {
@@ -102,6 +116,7 @@
     "level": 80,
     "zone": "Montagne des Koalaks",
     "subzone": "Forêt de Kaliptus",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-aermyne-braco-scalptaras.html"
   },
   {
@@ -109,6 +124,7 @@
     "level": 80,
     "zone": "Montagne des Koalaks",
     "subzone": "Territoire des Dragodindes Sauvages",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-dragodingo.html"
   },
   {
@@ -116,6 +132,7 @@
     "level": 80,
     "zone": "Plaines de Cania",
     "subzone": "Baie de Cania",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-musha-l-oni.html"
   },
   {
@@ -123,6 +140,7 @@
     "level": 80,
     "zone": "Saharach",
     "subzone": "Dunes des Ossements",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-tournade.html"
   },
   {
@@ -130,6 +148,7 @@
     "level": 80,
     "zone": "Forêt des Abraknydes",
     "subzone": "Forêt Sombre",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-tyranne-la-terrible.html"
   },
   {
@@ -137,6 +156,7 @@
     "level": 90,
     "zone": "Île de Moon",
     "subzone": "Chemin du Crâne",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-degolas.html"
   },
   {
@@ -144,6 +164,7 @@
     "level": 90,
     "zone": "Montagne des Koalaks",
     "subzone": "Lacs enchantés",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-rok-gnorok.html"
   },
   {
@@ -151,6 +172,7 @@
     "level": 90,
     "zone": "Landes de Sidimote",
     "subzone": "Route des Roulottes",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-simbadas.html"
   },
   {
@@ -158,6 +180,7 @@
     "level": 100,
     "zone": "Landes de Sidimote",
     "subzone": "Haut des Hurlements",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-carlita-de-l-aguerfelde.html"
   },
   {
@@ -165,6 +188,7 @@
     "level": 100,
     "zone": "Enutrosor",
     "subzone": "Creuset des Fortunés",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-la-maxi-malle.html"
   },
   {
@@ -172,6 +196,7 @@
     "level": 100,
     "zone": "Îlots de la mer d'Asse",
     "subzone": "Île de Kartonpath",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-naganita.html"
   },
   {
@@ -179,6 +204,7 @@
     "level": 100,
     "zone": "Amakna",
     "subzone": "Territoire des Porcos",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-le-prince-marchand.html"
   },
   {
@@ -186,6 +212,7 @@
     "level": 100,
     "zone": "Île de Moon",
     "subzone": "Jungle Interdite",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-trukipik.html"
   },
   {
@@ -193,6 +220,7 @@
     "level": 110,
     "zone": "Île d'Otomaï",
     "subzone": "Plaines herbeuses",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-gobrechaun.html"
   },
   {
@@ -200,6 +228,7 @@
     "level": 120,
     "zone": "Île de Frigost",
     "subzone": "Champs de glace",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-bouflouth.html"
   },
   {
@@ -207,6 +236,7 @@
     "level": 120,
     "zone": "Xélorium",
     "subzone": "Chemins d'hier",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-morblok.html"
   },
   {
@@ -214,6 +244,7 @@
     "level": 120,
     "zone": "Île d'Otomaï",
     "subzone": "Tourbière sans fond",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-nenufor-tilotus.html"
   },
   {
@@ -221,6 +252,7 @@
     "level": 120,
     "zone": "Île du Minotoror",
     "subzone": "Île du Minotoror",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-la-vashkiwi.html"
   },
   {
@@ -228,6 +260,7 @@
     "level": 130,
     "zone": "Île d'Otomaï",
     "subzone": "Tourbière nauséabonde",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-ali-grothor.html"
   },
   {
@@ -235,6 +268,7 @@
     "level": 130,
     "zone": "Terrdala",
     "subzone": "Île de Pandala",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-jerart-dupaindur.html"
   },
   {
@@ -242,6 +276,7 @@
     "level": 130,
     "zone": "Île de Frigost",
     "subzone": "Lac gelé",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-monsieur-pingouin.html"
   },
   {
@@ -249,6 +284,7 @@
     "level": 130,
     "zone": "Plaines de Cania",
     "subzone": "Bois de Litneg",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-padgref-demoel.html"
   },
   {
@@ -256,6 +292,7 @@
     "level": 130,
     "zone": "Saharach",
     "subzone": "Territoire Cacterre",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-le-roi-camole.html"
   },
   {
@@ -263,6 +300,7 @@
     "level": 140,
     "zone": "Île d'Otomaï",
     "subzone": "Jungle obscure",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-amy-l-empoisonneuse.html"
   },
   {
@@ -270,6 +308,7 @@
     "level": 140,
     "zone": "Île d'Otomaï",
     "subzone": "Village de la Canopée",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-darma.html"
   },
   {
@@ -277,6 +316,7 @@
     "level": 140,
     "zone": "Plaines de Cania",
     "subzone": "Cirque de Cania",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-fojumo.html"
   },
   {
@@ -284,6 +324,7 @@
     "level": 140,
     "zone": "Île de Frigost",
     "subzone": "Forêt des pins perdus",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-katigrou.html"
   },
   {
@@ -291,13 +332,15 @@
     "level": 140,
     "zone": "Srambad",
     "subzone": "Ruelles des Eaux-Suaires",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-panteroz.html"
   },
   {
     "name": "Aigripoil",
     "level": 150,
     "zone": "Enutrosor",
-    "subzone": " Carrière Aurifère",
+    "subzone": "Carrière Aurifère",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-aigripoil.html"
   },
   {
@@ -305,6 +348,7 @@
     "level": 150,
     "zone": "Île de Frigost",
     "subzone": "Berceau d'Alma",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-fantomayte.html"
   },
   {
@@ -312,6 +356,7 @@
     "level": 150,
     "zone": "Plaines de Cania",
     "subzone": "Landes de Cania",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-mogligli.html"
   },
   {
@@ -319,6 +364,7 @@
     "level": 150,
     "zone": "Île de Pandala",
     "subzone": "Feudala",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-zatoishwan.html"
   },
   {
@@ -326,6 +372,7 @@
     "level": 160,
     "zone": "Plaines de Cania",
     "subzone": "Dents de Pierre",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-anatak-diskedor.html"
   },
   {
@@ -333,6 +380,7 @@
     "level": 160,
     "zone": "Île d'Otomaï",
     "subzone": "Tronc de l'arbre Hakam",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-glandaf-l-aigri.html"
   },
   {
@@ -340,6 +388,7 @@
     "level": 160,
     "zone": "Île de Frigost",
     "subzone": "Larmes d'Ouronigride",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-vengeuse-masquee.html"
   },
   {
@@ -347,6 +396,7 @@
     "level": 170,
     "zone": "Île de Grobe",
     "subzone": "Mont des Tombeaux",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-crasper.html"
   },
   {
@@ -354,6 +404,7 @@
     "level": 170,
     "zone": "Île de Frigost",
     "subzone": "Cavernes Givrefoux",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-fuji-givrefoux.html"
   },
   {
@@ -361,6 +412,7 @@
     "level": 170,
     "zone": "Xélorium",
     "subzone": "Jour présent",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-hin.html"
   },
   {
@@ -368,6 +420,7 @@
     "level": 170,
     "zone": "",
     "subzone": "",
+    "image": "",
     "wiki": ""
   },
   {
@@ -375,6 +428,7 @@
     "level": 170,
     "zone": "Île de Frigost",
     "subzone": "Crevasse Perge",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-le-yechti.html"
   },
   {
@@ -382,6 +436,7 @@
     "level": 180,
     "zone": "Caverne des Fungus",
     "subzone": "Landes de Sidimote",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-carter-le-pillard.html"
   },
   {
@@ -389,6 +444,7 @@
     "level": 180,
     "zone": "Île de Frigost",
     "subzone": "Forêt pétrifiée",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-dremoan.html"
   },
   {
@@ -396,6 +452,7 @@
     "level": 180,
     "zone": "Île de Frigost",
     "subzone": "Mont Torrideau",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-le-guerrier-du-ko.html"
   },
   {
@@ -403,6 +460,7 @@
     "level": 180,
     "zone": "Srambad",
     "subzone": "Catacombres",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-la-mouchame.html"
   },
   {
@@ -410,6 +468,7 @@
     "level": 180,
     "zone": "Landes de Sidimote",
     "subzone": "Gisgoul",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-le-shushu-debruk-sayl.html"
   },
   {
@@ -417,6 +476,7 @@
     "level": 190,
     "zone": "Île de Sakaï",
     "subzone": "Forêt enneigée",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-le-docteur-eggob.html"
   },
   {
@@ -424,6 +484,7 @@
     "level": 190,
     "zone": "Île de Frigost",
     "subzone": "Crocs de verre",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-flasho.html"
   },
   {
@@ -431,6 +492,7 @@
     "level": 190,
     "zone": "Nimotopia",
     "subzone": "Nimotopia",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-predagob.html"
   },
   {
@@ -438,6 +500,7 @@
     "level": 190,
     "zone": "",
     "subzone": "",
+    "image": "",
     "wiki": ""
   },
   {
@@ -445,6 +508,7 @@
     "level": 190,
     "zone": "Île de Frigost",
     "subzone": "Ruche des Gloursons",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-viti-glourson.html"
   },
   {
@@ -452,6 +516,7 @@
     "level": 200,
     "zone": "Ecaflipus",
     "subzone": "Temple de Kerubim",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-atcham.html"
   },
   {
@@ -459,6 +524,7 @@
     "level": 200,
     "zone": "Profondeurs de Sufokia",
     "subzone": "Tréfonds des Trithons",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-buldalazred.html"
   },
   {
@@ -466,6 +532,7 @@
     "level": 200,
     "zone": "Île de Frigost",
     "subzone": "Bastion des froides légions",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-le-chevalier-de-glace.html"
   },
   {
@@ -473,6 +540,7 @@
     "level": 200,
     "zone": "Île de Frigost",
     "subzone": "Tour de la Clepsydre",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-culbutoeuf.html"
   },
   {
@@ -480,6 +548,7 @@
     "level": 200,
     "zone": "Île de Frigost",
     "subzone": "Jardins d'Hiver",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-glourdorak.html"
   },
   {
@@ -487,6 +556,7 @@
     "level": 200,
     "zone": "Baie de Sufokia",
     "subzone": "Salles des Embruns",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-le-grand-kongoku.html"
   },
   {
@@ -494,6 +564,7 @@
     "level": 200,
     "zone": "Profondeurs de Sufokia",
     "subzone": "Vestiges engloutis",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-le-homard-medali.html"
   },
   {
@@ -501,6 +572,7 @@
     "level": 200,
     "zone": "Base Abyssale",
     "subzone": "Salles des Abîmes",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-l-hyperscampe.html"
   },
   {
@@ -508,6 +580,7 @@
     "level": 200,
     "zone": "Saharach",
     "subzone": "Pyramide Maudite",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-le-khepricorne.html"
   },
   {
@@ -515,6 +588,7 @@
     "level": 200,
     "zone": "Île de Frigost",
     "subzone": "Caserne du Jour sans fin",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-le-fantome-braideur.html"
   },
   {
@@ -522,6 +596,7 @@
     "level": 200,
     "zone": "Île de Frigost",
     "subzone": "Remparts à vent",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-mekamouth.html"
   },
   {
@@ -529,6 +604,7 @@
     "level": 200,
     "zone": "Île de Frigost",
     "subzone": "Tannerie Écarlate",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-le-psikopompe.html"
   },
   {
@@ -536,6 +612,7 @@
     "level": 200,
     "zone": "Xélorium",
     "subzone": "Lendemains incertains",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-sicogne.html"
   },
   {
@@ -543,6 +620,7 @@
     "level": 200,
     "zone": "Profondeurs de Sufokia",
     "subzone": "Abîme de R'lyugluglu",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-takomako.html"
   },
   {
@@ -550,6 +628,7 @@
     "level": 200,
     "zone": "Enutrosor",
     "subzone": "Retraite des Éternels",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-voldelor.html"
   },
   {
@@ -557,6 +636,7 @@
     "level": 220,
     "zone": "Île de Frigost",
     "subzone": "Donjon du compte Harebourg (Donjon)",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/donjon-du-comte-harebourg.html"
   },
   {
@@ -564,6 +644,7 @@
     "level": 1600,
     "zone": "Srambad",
     "subzone": "Hauts Ténébreux",
+    "image": "",
     "wiki": "https://www.dofuspourlesnoobs.com/on-recherche-gein.html"
   }
 ]

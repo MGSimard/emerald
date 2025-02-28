@@ -3,7 +3,7 @@ import { useLiveQuery } from "dexie-react-hooks";
 import { db, type Target } from "@/localserver/db";
 import { updateSearchedAt, updateSeenAt, updateCapturedAt } from "@/localserver/actions";
 import { ResetDatabase } from "@/_components/ResetDatabase";
-import { IconSearch, IconSkull, IconCheck } from "@/_components/Icons";
+import { IconSearch, IconSkull, IconCheck, IconEye, IconEyeBlind } from "@/_components/Icons";
 import { formatDate } from "@/_utils/helpers";
 
 export function TargetList() {
@@ -29,7 +29,7 @@ export function TargetList() {
         <h1>Avis de recherche</h1>
         <div className="section-controls">
           <button className="btn" type="button" onClick={() => setShowCaptured(!showCaptured)}>
-            {showCaptured ? "Afficher capturés" : "Cacher capturés"}
+            Capturés{showCaptured ? <IconEye /> : <IconEyeBlind />}
           </button>
           <ResetDatabase />
         </div>
