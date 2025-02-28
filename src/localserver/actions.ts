@@ -1,5 +1,6 @@
 import { db } from "@/localserver/db";
 
+// Update last search date
 export async function updateSearchedAt(targetId: number) {
   try {
     const success = await db.targets.update(targetId, { searchedAt: new Date() });
@@ -9,6 +10,7 @@ export async function updateSearchedAt(targetId: number) {
   }
 }
 
+// Update last seen date (to mark actual mob death time)
 export async function updateSeenAt(targetId: number) {
   try {
     const success = await db.targets.update(targetId, { seenAt: new Date() });
@@ -18,11 +20,8 @@ export async function updateSeenAt(targetId: number) {
   }
 }
 
+// Update captured date, if already exists set to null (to cancel)
 export async function updateCapturedAt(targetId: number) {
-  // If null add new Date
-  // If not null set to null
-  // USE A TRANSACTION
-
   try {
     await db.transaction("rw", db.targets, async () => {
       const target = await db.targets.get(targetId);
@@ -36,6 +35,16 @@ export async function updateCapturedAt(targetId: number) {
         if (!success) throw new Error("DATABASE ERROR: Failed updating captured date.");
       }
     });
+  } catch (err: unknown) {
+    alert(err instanceof Error ? err.message : "UNKNOWN ERROR.");
+  }
+}
+
+// Reset database to initial data
+export async function resetDatabase() {
+  try {
+    await db.delete();
+    await db.open();
   } catch (err: unknown) {
     alert(err instanceof Error ? err.message : "UNKNOWN ERROR.");
   }

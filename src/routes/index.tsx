@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { TargetList } from "@/_components/TargetList";
+import { ResetDatabase } from "@/_components/ResetDatabase";
 
 export const Route = createFileRoute("/")({
   component: PageHome,
@@ -20,6 +21,7 @@ function PageHome() {
       <button type="button" className="btn">
         Button Regular
       </button>
+      <ResetDatabase />
       <TargetList />
     </main>
   );
