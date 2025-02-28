@@ -1,12 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { TestDexie } from "@/_components/TestDexie";
-import { TargetCard } from "@/_components/TargetCard";
+import { TargetList } from "@/_components/TargetList";
 
 export const Route = createFileRoute("/")({
   component: PageHome,
 });
-
-//UseLiveQuery
 
 function PageHome() {
   return (
@@ -23,11 +20,7 @@ function PageHome() {
       <button type="button" className="btn">
         Button Regular
       </button>
-      <ul>
-        <TargetCard />
-      </ul>
-
-      <TestDexie />
+      <TargetList />
     </main>
   );
 }

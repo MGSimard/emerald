@@ -32,7 +32,7 @@ const preparedData = initialData.map((target) => ({
   searchedAt: null,
   seenAt: null,
   capturedAt: null,
-  updatedAt: new Date().toISOString(),
+  updatedAt: new Date(),
 }));
 
 // Seed DB with initial data (Runs automatically on first DB interaction)

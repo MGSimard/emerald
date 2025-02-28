@@ -186,3 +186,43 @@ details ol {
   text-align: center;
 }
 /**/
+/* TARGET LIST */
+#target-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.target-card {
+  display: flex;
+  align-items: stretch;
+  border-radius: 0.4rem;
+}
+.target-card * {
+  border: 1px solid rgba(255, 0, 0, 0.5);
+}
+.target-card-left {
+  position: relative;
+  border: 2px solid blue !important;
+  flex-shrink: 0;
+  width: 10rem;
+}
+.target-level {
+  position: absolute;
+  transform: translateX(-50%);
+  bottom: 0;
+  left: 50%;
+}
+.target-card-right {
+  border: 2px solid green !important;
+  flex-grow: 1;
+}
+.target-zone {
+}
+.target-subzone {
+  color: var(--clrDetail);
+}
+.target-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
