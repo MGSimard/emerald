@@ -8,6 +8,7 @@ interface Target {
   zone: string;
   subzone: string;
   wiki: URL;
+  searchedAt: Date | null;
   seenAt: Date | null;
   capturedAt: Date | null;
   updatedAt: Date;
@@ -28,6 +29,7 @@ db.version(1).stores({
 // Prepare data by adding missing columns
 const preparedData = initialData.map((target) => ({
   ...target,
+  searchedAt: null,
   seenAt: null,
   capturedAt: null,
   updatedAt: new Date().toISOString(),
@@ -38,5 +40,13 @@ db.on("populate", async (tx: Transaction) => {
   await tx.table("targets").bulkAdd(preparedData);
 });
 
+// Add new targets by ID if those IDs don't already exist in DB
+// Update existing targets' static data (name, level, zone, subzone, wiki) if initialData has updated values
+// (Like correcting name typos, patches changing levels, zones etc)
+// But RETAIN user's dynamic data, like seenAt, capturedAt, updatedAt and anchor data like ID.
+
 export type { Target };
 export { db };
+
+// Create a function for users to be able to completely clear and reset their indexedDB data (nuke DB, not just a data reset)
+// They'll automatically get newly populated DB with initialData on next DB call

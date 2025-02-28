@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { TestDexie } from "@/_components/TestDexie";
+import { TargetCard } from "@/_components/TargetCard";
 
 export const Route = createFileRoute("/")({
   component: PageHome,
@@ -22,6 +23,10 @@ function PageHome() {
       <button type="button" className="btn">
         Button Regular
       </button>
+      <ul>
+        <TargetCard />
+      </ul>
+
       <TestDexie />
     </main>
   );
