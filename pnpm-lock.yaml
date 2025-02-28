@@ -37,10 +37,10 @@ importers:
         specifier: ^22.13.5
         version: 22.13.5
       '@types/react':
-        specifier: ^19.0.8
+        specifier: ^19.0.10
         version: 19.0.10
       '@types/react-dom':
-        specifier: ^19.0.3
+        specifier: ^19.0.4
         version: 19.0.4(@types/react@19.0.10)
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.25.0
@@ -61,13 +61,13 @@ importers:
         specifier: 19.0.0-beta-e1e972c-20250221
         version: 19.0.0-beta-e1e972c-20250221(eslint@9.21.0)
       typescript:
-        specifier: ^5.7.2
+        specifier: ^5.7.3
         version: 5.7.3
       typescript-eslint:
         specifier: ^8.25.0
         version: 8.25.0(eslint@9.21.0)(typescript@5.7.3)
       vite:
-        specifier: ^6.1.0
+        specifier: ^6.2.0
         version: 6.2.0(@types/node@22.13.5)(tsx@4.19.3)
 
 packages:
