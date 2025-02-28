@@ -255,8 +255,13 @@ details ol {
   overflow: hidden;
   box-shadow: inset 0 1px 0 hsl(from var(--clrBgLight) h s calc(l + 10));
 }
+.target-card:hover,
+.target-card:has(:focus-visible) {
+  border-color: hsl(from var(--clrBorder) h s calc(l + 10));
+}
 .target-captured {
   opacity: 0.5;
+  filter: grayscale(1);
 }
 .target-card-left {
   position: relative;
@@ -269,6 +274,26 @@ details ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.target-name a {
+  position: relative;
+}
+.target-name a svg {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 0.2em);
+  width: 0.8em;
+  height: 0.8em;
+  opacity: 0;
+  pointer-events: none;
+}
+.target-name a:hover,
+.target-name a:focus-visible {
+  text-decoration: underline;
+}
+.target-name a:hover svg,
+.target-name a:focus-visible svg {
+  opacity: 1;
 }
 .target-level {
   position: absolute;

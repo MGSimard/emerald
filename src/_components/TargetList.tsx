@@ -3,7 +3,7 @@ import { useLiveQuery } from "dexie-react-hooks";
 import { db, type Target } from "@/localserver/db";
 import { updateSearchedAt, updateSeenAt, updateCapturedAt } from "@/localserver/actions";
 import { ResetDatabase } from "@/_components/ResetDatabase";
-import { IconSearch, IconSkull, IconCheck, IconEye, IconEyeBlind } from "@/_components/Icons";
+import { IconSearch, IconSkull, IconCheck, IconEye, IconEyeBlind, IconLink } from "@/_components/Icons";
 import { formatDate } from "@/_utils/helpers";
 
 export function TargetList() {
@@ -61,6 +61,7 @@ function TargetCard({ target }: { target: Target }) {
           <h3 className="target-name">
             <a href={wiki.toString()} target="_blank">
               {name}
+              <IconLink />
             </a>
           </h3>
           <span className="target-zone">{zone}</span>
