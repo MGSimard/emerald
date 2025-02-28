@@ -17,7 +17,7 @@
 }
 :root[data-theme="dark"] {
   --clrBg: hsl(212, 60%, 5%);
-
+  --clrBgLight: hsl(183, 41%, 10%);
   --clrHeading: hsl(0, 0%, 100%);
   --clrText: hsl(240, 9%, 91%);
   --clrDetail: rgb(171, 171, 171);
@@ -25,6 +25,7 @@
 }
 :root[data-theme="light"] {
   --clrBg: hsl(0, 0%, 88.24%);
+  --clrBgLight: hsl(0, 0%, 88.24%);
   --clrHeading: hsl(0, 0%, 0%);
   --clrText: hsl(0, 0%, 5%);
   --clrDetail: rgb(105, 105, 105);
@@ -216,27 +217,33 @@ details ol {
   display: flex;
   align-items: stretch;
   border-radius: 0.4rem;
+  background: var(--clrBgLight);
+  border: 1px solid var(--clrBorder);
+  overflow: hidden;
 }
 .target-captured {
   opacity: 0.5;
 }
-.target-card * {
-  border: 1px solid rgba(255, 0, 0, 0.5);
-}
 .target-card-left {
   position: relative;
-  border: 2px solid blue !important;
   flex-shrink: 0;
   width: 10rem;
+  background: linear-gradient(hsla(from var(--clrBg) h s l / 0.5), transparent);
+  border-right: 1px solid var(--clrBorder);
+}
+.target-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .target-level {
   position: absolute;
   transform: translateX(-50%);
   bottom: 0;
   left: 50%;
+  text-shadow: 0 0.1rem 0.1rem black;
 }
 .target-card-right {
-  border: 2px solid green !important;
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
@@ -246,6 +253,9 @@ details ol {
 }
 .target-metadata {
   word-break: break-word;
+}
+.target-metadata > * {
+  display: block;
 }
 .target-subzone {
   color: var(--clrDetail);

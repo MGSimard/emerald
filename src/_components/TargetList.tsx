@@ -30,6 +30,11 @@ function TargetCard({ target }: { target: Target }) {
   return (
     <li className={`target-card${capturedAt ? " target-captured" : ""}`}>
       <div className="target-card-left">
+        <img
+          className="target-image"
+          alt="a"
+          src="https://www.dofuspourlesnoobs.com/uploads/1/3/0/1/13010384/custom_themes/586567114324766674/files/wanted/monsters/roub-ignolles.png"
+        />
         <span className="target-level">Nv.{level}</span>
       </div>
       <div className="target-card-right">
@@ -40,7 +45,7 @@ function TargetCard({ target }: { target: Target }) {
             </a>
           </h3>
           <span className="target-zone">{zone}</span>
-          <span className="target-subzone">/ {subzone}</span>
+          <span className="target-subzone">{subzone}</span>
         </div>
         <div className="target-actions">
           <button className="btn" type="button" onClick={() => updateSearchedAt(id)}>
