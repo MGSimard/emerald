@@ -24,12 +24,12 @@
   --clrBorder: hsl(240, 3%, 19%);
 }
 :root[data-theme="light"] {
-  --clrBg: hsl(0, 0%, 88.24%);
-  --clrBgLight: hsl(0, 0%, 88.24%);
-  --clrHeading: hsl(0, 0%, 0%);
-  --clrText: hsl(0, 0%, 5%);
-  --clrDetail: rgb(105, 105, 105);
-  --clrBorder: hsl(0, 0%, 0%);
+  --clrBg: hsl(0, 0%, 98%);
+  --clrBgLight: hsl(0, 0%, 92%);
+  --clrHeading: hsl(212, 60%, 20%);
+  --clrText: hsl(240, 9%, 30%);
+  --clrDetail: hsl(0, 0%, 50%);
+  --clrBorder: hsl(240, 3%, 80%);
 }
 html {
   font-family: var(--GeistSans-and-fallbacks);
@@ -70,6 +70,21 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--clrBorder);
+}
+#nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--GeistMono-and-fallbacks);
+  font-weight: 200;
+  font-size: 3rem;
+  color: var(--clrPrimary);
+  line-height: 1;
+}
+#nav-logo img {
+  height: 3rem;
 }
 .nav-controls {
   display: flex;
@@ -82,6 +97,9 @@ nav {
   justify-content: center;
   width: 3rem;
   height: 3rem;
+}
+header {
+  padding: 2rem 0;
 }
 main {
   flex-grow: 1;
@@ -208,6 +226,20 @@ details ol {
 }
 /**/
 /* TARGET LIST */
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--clrBorder);
+}
+.section-controls {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 #target-list {
   display: flex;
   flex-direction: column;
@@ -241,7 +273,8 @@ details ol {
   transform: translateX(-50%);
   bottom: 0;
   left: 50%;
-  text-shadow: 0 0.1rem 0.1rem black;
+  font-weight: 600;
+  text-shadow: 0 0.1rem 0.1rem var(--clrBg);
 }
 .target-card-right {
   flex-grow: 1;

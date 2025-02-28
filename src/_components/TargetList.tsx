@@ -1,12 +1,15 @@
+import { useState } from "react";
 import { useLiveQuery } from "dexie-react-hooks";
 import { db, type Target } from "@/localserver/db";
 import { updateSearchedAt, updateSeenAt, updateCapturedAt } from "@/localserver/actions";
-import { formatDate } from "@/_utils/helpers";
+import { ResetDatabase } from "@/_components/ResetDatabase";
 import { IconSearch, IconSkull, IconCheck } from "@/_components/Icons";
+import { formatDate } from "@/_utils/helpers";
 
 export function TargetList() {
+  const [showCaptured, setShowCaptured] = useState(true);
   const targets = useLiveQuery(() => db.targets.toArray());
-  if (!targets || targets.length <= 0) return <div>Target list empty.</div>;
+  if (!targets || targets.length <= 0) return <section>Target list empty.</section>;
 
   // Sort targets by level, secondary (for monsters that have the same level) by ID.
   // I think the secondary ID sorting for similar levels already happens because
@@ -15,12 +18,28 @@ export function TargetList() {
     return a.level - b.level;
   });
 
+  const filteredTargets = sortedTargets.filter((target) => {
+    if (showCaptured) return true;
+    return !target.capturedAt;
+  });
+
   return (
-    <ul id="target-list">
-      {sortedTargets.map((target) => (
-        <TargetCard key={target.id} target={target} />
-      ))}
-    </ul>
+    <section>
+      <div className="section-heading">
+        <h1>Avis de recherche</h1>
+        <div className="section-controls">
+          <button className="btn" type="button" onClick={() => setShowCaptured(!showCaptured)}>
+            {showCaptured ? "Afficher capturés" : "Cacher capturés"}
+          </button>
+          <ResetDatabase />
+        </div>
+      </div>
+      <ul id="target-list">
+        {filteredTargets.map((target) => (
+          <TargetCard key={target.id} target={target} />
+        ))}
+      </ul>
+    </section>
   );
 }
 
