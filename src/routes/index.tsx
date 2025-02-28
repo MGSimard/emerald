@@ -5,5 +5,15 @@ export const Route = createFileRoute("/")({
 });
 
 function App() {
-  return <main>Main</main>;
+  return (
+    <main>
+      Main
+      <button type="button" className="btn btn-primary">
+        Button Primary
+      </button>
+      <button type="button" className="btn">
+        Button Regular
+      </button>
+    </main>
+  );
 }

@@ -2,38 +2,32 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid red !important;
 }
 :root {
   --siteMaxWidth: 1440px;
   --sitePadding: 2rem;
-
   --GeistSans-and-fallbacks:
     "Geist Sans", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica,
     Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
   --GeistMono-and-fallbacks: "Geist Mono", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  --clrPrimary: hsl(66, 100%, 33%);
+  --clrPrimaryHover: hsl(from var(--clrPrimary) h s calc(l + 10));
 }
 :root[data-theme="dark"] {
-  --clrPrimary: hsl(0, 95%, 62%); /* Imperial Red */
-  --clrBg: hsl(206, 23%, 21%); /* Night */
-  --clrBgLight: hsl(207, 21%, 29%); /* Raisin Black */
-  --clrHeading: hsl(0, 0%, 100%); /* White */
-  --clrText: hsl(240, 9%, 91%); /* Offwhite */
-  --clrDetail: rgb(171, 171, 171); /* Silver */
-  --clrScroll: hsl(240, 3%, 19%);
+  --clrBg: hsl(212, 60%, 5%);
+  --clrBgLight: hsl(191, 59%, 30%);
+  --clrHeading: hsl(0, 0%, 100%);
+  --clrText: hsl(240, 9%, 91%);
+  --clrDetail: rgb(171, 171, 171);
   --clrBorder: hsl(240, 3%, 19%);
-  --clrHover: hsl(240, 3%, 19%);
 }
 :root[data-theme="light"] {
-  --clrPrimary: hsl(243.61, 64.52%, 29.41%);
   --clrBg: hsl(0, 0%, 88.24%);
   --clrBgLight: hsl(0, 0%, 76%);
   --clrHeading: hsl(0, 0%, 0%);
   --clrText: hsl(0, 0%, 5%);
   --clrDetail: rgb(105, 105, 105);
-  --clrScroll: hsl(240, 3%, 19%);
   --clrBorder: hsl(0, 0%, 0%);
-  --clrHover: hsl(0, 0%, 76%);
 }
 html {
   font-family: var(--GeistSans-and-fallbacks);
@@ -123,16 +117,13 @@ ol {
   list-style-position: inside;
 }
 button {
-  border: none;
+  all: unset;
+  font-family: inherit;
+  color: inherit;
   cursor: pointer;
-  background: none;
 }
 button:disabled {
   pointer-events: none;
-}
-button svg {
-  height: 1.2em;
-  width: 1.2em;
 }
 [popover] {
   color: inherit;
@@ -151,9 +142,22 @@ details ol {
 }
 /* HELPERS */
 .btn {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  background-color: var(--clrBg);
+  border: 1px solid var(--clrBorder);
+  border-radius: 0.4rem;
 }
-.btn:hover,
-.btn:focus-visible {
+.btn:hover {
+  background-color: var(--clrBgLight);
+}
+.btn-primary {
+  color: var(--clrHeading);
+  background-color: var(--clrPrimary);
+}
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background-color: var(--clrPrimaryHover);
 }
 .btn:active {
 }
