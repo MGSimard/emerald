@@ -67,15 +67,30 @@ function TargetCard({ target }: { target: Target }) {
           <span className="target-subzone">{subzone}</span>
         </div>
         <div className="target-actions">
-          <button className="btn" type="button" onClick={() => updateSearchedAt(id)}>
+          <button
+            className="btn"
+            type="button"
+            onClick={() => updateSearchedAt(id)}
+            aria-label="Dernière recherche"
+            title="Dernière recherche">
             {formatDate(searchedAt)}
             <IconSearch />
           </button>
-          <button className="btn" type="button" onClick={() => updateSeenAt(id)}>
+          <button
+            className="btn"
+            type="button"
+            onClick={() => updateSeenAt(id)}
+            aria-label="Dernièrement vu"
+            title="Dernièrement vu">
             {formatDate(seenAt)}
             <IconSkull />
           </button>
-          <button className="btn btn-primary" type="button" onClick={() => updateCapturedAt(id)}>
+          <button
+            className="btn btn-primary"
+            type="button"
+            onClick={() => updateCapturedAt(id)}
+            aria-label={capturedAt ? "Réinitialiser" : "Marquer comme capturé"}
+            title={capturedAt ? "Réinitialiser" : "Marquer comme capturé"}>
             {formatDate(capturedAt)}
             <IconCheck />
           </button>

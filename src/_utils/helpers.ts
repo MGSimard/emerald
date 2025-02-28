@@ -1,5 +1,5 @@
 export function formatDate(date: Date | null) {
-  if (!date) return "-";
+  if (!date) return "";
 
   return date
     .toLocaleString("en-US", {
