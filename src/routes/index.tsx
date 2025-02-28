@@ -1,10 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
-  component: App,
+  component: PageHome,
 });
 
-function App() {
+//UseLiveQuery
+
+function PageHome() {
   return (
     <main>
       <h1>H1</h1>
