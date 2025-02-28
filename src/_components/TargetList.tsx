@@ -29,7 +29,7 @@ export function TargetList() {
         <h1>Avis de recherche</h1>
         <div className="section-controls">
           <button className="btn" type="button" onClick={() => setShowCaptured(!showCaptured)}>
-            Capturés{showCaptured ? <IconEye /> : <IconEyeBlind />}
+            Capturés {showCaptured ? <IconEye /> : <IconEyeBlind />}
           </button>
           <ResetDatabase />
         </div>
