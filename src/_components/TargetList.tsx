@@ -51,7 +51,7 @@ function TargetCard({ target }: { target: Target }) {
             {formatDate(seenAt)}
             <IconSkull />
           </button>
-          <button className="btn" type="button" onClick={() => updateCapturedAt(id)}>
+          <button className="btn btn-primary" type="button" onClick={() => updateCapturedAt(id)}>
             {formatDate(capturedAt)}
             <IconCheck />
           </button>
