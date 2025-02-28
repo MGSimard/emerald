@@ -1,6 +1,8 @@
 import { useLiveQuery } from "dexie-react-hooks";
 import { db, type Target } from "@/localserver/db";
+import { updateSearchedAt } from "@/localserver/actions";
 import { formatDate } from "@/_utils/helpers";
+import { IconCheck, IconSearch, IconSkull } from "@/_components/Icons";
 
 export function TargetList() {
   const targets = useLiveQuery(() => db.targets.toArray());
@@ -16,7 +18,7 @@ export function TargetList() {
 }
 
 function TargetCard({ target }: { target: Target }) {
-  const { name, level, zone, subzone, searchedAt, seenAt, capturedAt, updatedAt } = target;
+  const { id, name, level, zone, subzone, searchedAt, seenAt, capturedAt, updatedAt } = target;
 
   return (
     <li className="target-card">
@@ -28,12 +30,20 @@ function TargetCard({ target }: { target: Target }) {
           <h3 className="target-name">{name}</h3>
           <span className="target-zone">{zone}</span>
           <span className="target-subzone">/ {subzone}</span>
-          <span>test: {formatDate(updatedAt)} </span>
         </div>
         <div className="target-actions">
-          <button type="button">RECHERCHE: {formatDate(searchedAt)}</button>
-          <button type="button">Vu: {formatDate(seenAt)}</button>
-          <button type="button">Capturé: {formatDate(capturedAt)}</button>
+          <button className="btn" type="button" onClick={() => updateSearchedAt(id)}>
+            <IconSearch />
+            {formatDate(searchedAt)}
+          </button>
+          <button className="btn" type="button">
+            <IconSkull />
+            {formatDate(seenAt)}
+          </button>
+          <button className="btn" type="button">
+            <IconCheck />
+            {formatDate(capturedAt)}
+          </button>
         </div>
       </div>
     </li>

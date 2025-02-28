@@ -144,6 +144,9 @@ details ol {
 }
 /* HELPERS */
 .btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   padding: 1rem 2rem;
   background-color: var(--clrBg);
   border: 1px solid var(--clrBorder);
@@ -151,6 +154,10 @@ details ol {
 }
 .btn:hover {
   background-color: var(--clrBgLight);
+}
+.btn svg {
+  width: 1.2em;
+  height: 1.2em;
 }
 .btn-primary {
   font-weight: 700;
