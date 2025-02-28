@@ -12,9 +12,6 @@ export function TargetList() {
   const targets = useLiveQuery(() => db.targets.toArray());
   if (!targets || targets.length <= 0) return <section>Target list empty.</section>;
 
-  // Sort targets by level, secondary (for monsters that have the same level) by ID.
-  // I think the secondary ID sorting for similar levels already happens because
-  // the database is already returned in ID ordering?
   const sortedTargets = [...targets].sort((a, b) => {
     return a.level - b.level;
   });
@@ -24,12 +21,17 @@ export function TargetList() {
     return !target.capturedAt;
   });
 
+  const handleShowCaptured = () => {
+    setShowCaptured(!showCaptured);
+    toast.success(`Avis capturés ${showCaptured ? "masqué" : "affiché"}.`);
+  };
+
   return (
     <section>
       <div className="section-heading">
         <h1>Avis de recherche</h1>
         <div className="section-controls">
-          <button className="btn" type="button" onClick={() => setShowCaptured(!showCaptured)}>
+          <button className="btn" type="button" onClick={handleShowCaptured}>
             Capturés {showCaptured ? <IconEye /> : <IconEyeBlind />}
           </button>
           <ResetDatabase />
@@ -46,6 +48,24 @@ export function TargetList() {
 
 function TargetCard({ target }: { target: Target }) {
   const { id, name, level, zone, subzone, wiki, searchedAt, seenAt, capturedAt } = target;
+
+  const handleUpdateSearchedAt = async () => {
+    const { success, message } = await updateSearchedAt(id);
+    if (success) toast.success(message);
+    else toast.error(message);
+  };
+
+  const handleUpdateSeenAt = async () => {
+    const { success, message } = await updateSeenAt(id);
+    if (success) toast.success(message);
+    else toast.error(message);
+  };
+
+  const handleUpdateCapturedAt = async () => {
+    const { success, message } = await updateCapturedAt(id);
+    if (success) toast.success(message);
+    else toast.error(message);
+  };
 
   return (
     <li className={`target-card${capturedAt ? " target-captured" : ""}`}>
@@ -72,7 +92,7 @@ function TargetCard({ target }: { target: Target }) {
           <button
             className="btn"
             type="button"
-            onClick={() => updateSearchedAt(id)}
+            onClick={handleUpdateSearchedAt}
             aria-label="Dernière recherche"
             title="Dernière recherche">
             {formatDate(searchedAt)}
@@ -81,7 +101,7 @@ function TargetCard({ target }: { target: Target }) {
           <button
             className="btn"
             type="button"
-            onClick={() => updateSeenAt(id)}
+            onClick={handleUpdateSeenAt}
             aria-label="Dernièrement vu"
             title="Dernièrement vu">
             {formatDate(seenAt)}
@@ -90,7 +110,7 @@ function TargetCard({ target }: { target: Target }) {
           <button
             className="btn btn-primary"
             type="button"
-            onClick={() => updateCapturedAt(id)}
+            onClick={handleUpdateCapturedAt}
             aria-label={capturedAt ? "Réinitialiser" : "Marquer comme capturé"}
             title={capturedAt ? "Réinitialiser" : "Marquer comme capturé"}>
             {formatDate(capturedAt)}

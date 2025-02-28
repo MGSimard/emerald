@@ -6,8 +6,6 @@
 - [ ] Keep the JSON && localDB synced
 - [ ] Look for new ID additions
 - [ ] Look for any static field changes (name, level, zone, subzone, wiki)
-- [ ] Sonner
-- [ ] Add UI feedback for successes and errors for actions
 - [ ] heading buttons responsive
 - [ ] ...
 - [ ] ...
