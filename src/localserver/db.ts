@@ -1,4 +1,5 @@
-import Dexie, { type EntityTable } from "dexie";
+import Dexie, { type Transaction, type EntityTable } from "dexie";
+import initialData from "@/localserver/initialData.json";
 
 interface Target {
   id: number;
@@ -6,11 +7,12 @@ interface Target {
   level: number;
   zone: string;
   subzone: string;
+  wiki: URL;
   seenAt: Date | null;
   capturedAt: Date | null;
   updatedAt: Date;
 }
-
+// Create DB instance
 const db = new Dexie("BountyDatabase") as Dexie & {
   targets: EntityTable<
     Target,
@@ -18,9 +20,22 @@ const db = new Dexie("BountyDatabase") as Dexie & {
   >;
 };
 
-// Schema declaration:
+// Define schema (Declare indexes, not all columns)
 db.version(1).stores({
-  targets: "++id, name, level, zone, subzone, seenAt, capturedAt, updatedAt", // primary key "id" (for the runtime!)
+  targets: "&id",
+});
+
+// Prepare data by adding missing columns
+const preparedData = initialData.map((target) => ({
+  ...target,
+  seenAt: null,
+  capturedAt: null,
+  updatedAt: new Date().toISOString(),
+}));
+
+// Seed DB with initial data (Runs automatically on first DB interaction)
+db.on("populate", async (tx: Transaction) => {
+  await tx.table("targets").bulkAdd(preparedData);
 });
 
 export type { Target };
