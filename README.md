@@ -19,7 +19,7 @@ Emerald est une application de suivi local-first, optimisée pour gérer le prog
 | TypeScript      | 5.8.2   | Type Safety             | [typescriptlang.org](https://www.typescriptlang.org/)     |
 | Dexie.js        | 4.0.11  | IndexedDB Wrapper       | [dexie.org](https://dexie.org)                            |
 | ESLint          | 9.21.0  | Flat Config             | [eslint.org](https://eslint.org/)                         |
-| Node            | 23.8.0  | Runtime                 | [nodejs.org](https://nodejs.org/)                         |
+| Node            | 23.8.0  | Runtime Environment     | [nodejs.org](https://nodejs.org/)                         |
 | pnpm            | 9.15.4  | Package Manager         | [pnpm.io](https://pnpm.io/)                               |
 | ???             | ???     | Hosting                 | ???                                                       |
 | Sonner          | 2.0.1   | UI Notifications        | [sonner.emilkowal.ski](https://sonner.emilkowal.ski/)     |
