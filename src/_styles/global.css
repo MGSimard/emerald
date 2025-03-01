@@ -375,6 +375,40 @@ details ol {
   padding: 0.5rem;
   justify-content: flex-end;
 }
+/* FAQ DIALOG */
+dialog {
+  margin: auto;
+  padding: 2rem;
+  text-align: start;
+  color: var(--clrText);
+  background: var(--clrBgLight);
+  border: 1px solid var(--clrBorder);
+  border-radius: 0.4rem;
+  outline: none;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--clrScroll) var(--clrBgLight);
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(0.5rem);
+}
+dialog[open] {
+  animation: slidefade 0.2s ease forwards;
+}
+dialog[open]::backdrop {
+  animation: fade 0.2s ease forwards;
+}
+@keyframes slidefade {
+  0% {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  100% {
+    transform: unset;
+    opacity: 1;
+  }
+}
 
 @media only screen and (max-width: 492px) {
   .target-card-right {

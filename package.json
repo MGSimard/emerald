@@ -1,7 +1,29 @@
 {
   "name": "emerald",
+  "version": "1.0.0",
   "private": true,
+  "author": "MGSimard <mgsimard.dev@gmail.com> (https://mgsimard.dev)",
+  "description": "Emerald est une application de suivi local-first, optimisée pour gérer le progrès des Avis de recherche sur Dofus.",
+  "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MGSimard/emerald.git"
+  },
+  "keywords": [
+    "emerald",
+    "emeraude",
+    "dofus",
+    "avis de recherche",
+    "bounty quests",
+    "tracker",
+    "dexie.js",
+    "local-first"
+  ],
+  "bugs": {
+    "url": "https://github.com/MGSimard/emerald/issues"
+  },
+  "homepage": "https://github.com/MGSimard/emerald#readme",
   "scripts": {
     "start": "vite --port 3000",
     "build": "vite build && tsc",
