@@ -149,6 +149,7 @@ ol {
 }
 button {
   all: unset;
+  flex-shrink: 0;
   text-transform: uppercase;
   font-family: var(--GeistMono-and-fallbacks);
   color: inherit;
@@ -254,12 +255,13 @@ details ol {
 }
 #search-input {
   all: unset;
-  flex-grow: 1;
+  flex-shrink: 1;
   padding: 1rem;
   border: 1px solid var(--clrBorder);
   border-radius: 0.4rem;
-  height: 100%;
   background: hsl(from var(--clrBgLight) h s calc(l - 2));
+  min-width: 0;
+  width: 100%;
 }
 #target-list {
   display: flex;
@@ -318,11 +320,11 @@ details ol {
   opacity: 1;
 }
 .target-level {
+  font-family: var(--GeistMono-and-fallbacks);
   position: absolute;
   transform: translateX(-50%);
   bottom: 0;
   left: 50%;
-  font-weight: 600;
   text-shadow: 0 0.1rem 0.1rem var(--clrBg);
 }
 .target-card-right {

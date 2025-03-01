@@ -23,9 +23,6 @@ export function TargetList() {
   });
 
   const searchFilteredTargets = filteredTargets.filter((target) => {
-    // We should also account for accents/other special variations of characters
-    // For instace é è ê etc should match e
-
     const normalizedFilterQuery = filterQuery
       .normalize("NFKD")
       .toLowerCase()
@@ -103,7 +100,7 @@ function TargetCard({ target }: { target: Target }) {
     <li className={`target-card${capturedAt ? " target-captured" : ""}`}>
       <div className="target-card-left">
         <img className="target-image" alt="a" src={image} />
-        <span className="target-level">Nv.{level}</span>
+        <span className="target-level">Lv.{level}</span>
       </div>
       <div className="target-card-right">
         <div className="target-metadata">
