@@ -3,12 +3,13 @@ import { useLiveQuery } from "dexie-react-hooks";
 import { db, type Target } from "@/localserver/db";
 import { updateSearchedAt, updateSeenAt, updateCapturedAt } from "@/localserver/actions";
 import { ResetDatabase } from "@/_components/ResetDatabase";
-import { IconSearch, IconSkull, IconCheck, IconEye, IconEyeBlind, IconLink, IconChevronUp } from "@/_components/Icons";
+import { IconSearch, IconSkull, IconCheck, IconEye, IconEyeBlind, IconLink } from "@/_components/Icons";
 import { formatDate } from "@/_utils/helpers";
 import { toast } from "sonner";
 
 export function TargetList() {
   const [showCaptured, setShowCaptured] = useState(true);
+  const [filterQuery, setFilterQuery] = useState("");
   const targets = useLiveQuery(() => db.targets.toArray());
   if (!targets || targets.length <= 0) return <section>Target list empty.</section>;
 
@@ -21,6 +22,30 @@ export function TargetList() {
     return !target.capturedAt;
   });
 
+  const searchFilteredTargets = filteredTargets.filter((target) => {
+    // We should also account for accents/other special variations of characters
+    // For instace é è ê etc should match e
+
+    const normalizedFilterQuery = filterQuery
+      .normalize("NFKD")
+      .toLowerCase()
+      .replace(/[\u0300-\u036f]/g, "");
+
+    return (
+      target.name
+        .normalize("NFKD")
+        .toLowerCase()
+        .replace(/[\u0300-\u036f]/g, "")
+        .includes(normalizedFilterQuery) ||
+      target.zone
+        .normalize("NFKD")
+        .toLowerCase()
+        .replace(/[\u0300-\u036f]/g, "")
+        .includes(normalizedFilterQuery) ||
+      target.subzone.normalize("NFKD").toLowerCase().includes(normalizedFilterQuery)
+    );
+  });
+
   const handleShowCaptured = () => {
     setShowCaptured(!showCaptured);
     toast.success(`Avis capturés ${showCaptured ? "masqué" : "affiché"}.`);
@@ -31,6 +56,13 @@ export function TargetList() {
       <div className="section-heading">
         <h1>Avis de recherche</h1>
         <div className="section-controls">
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Filtrer..."
+            value={filterQuery}
+            onChange={(e) => setFilterQuery(e.target.value)}
+          />
           <button className="btn" type="button" onClick={handleShowCaptured}>
             Capturés {showCaptured ? <IconEye /> : <IconEyeBlind />}
           </button>
@@ -38,7 +70,7 @@ export function TargetList() {
         </div>
       </div>
       <ul id="target-list">
-        {filteredTargets.map((target) => (
+        {searchFilteredTargets.map((target) => (
           <TargetCard key={target.id} target={target} />
         ))}
       </ul>
