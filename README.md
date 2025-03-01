@@ -1,3 +1,5 @@
+![Preview](https://github.com/MGSimard/emerald/blob/master/public/metadata/twitter-image.png?raw=true)
+
 # [Emerald](https://emerald-app.pages.dev/)
 
 Emerald est une application de suivi local-first, optimisée pour gérer le progrès des Avis de recherche sur Dofus.
