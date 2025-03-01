@@ -8,7 +8,6 @@ import { formatDate } from "@/_utils/helpers";
 import { toast } from "sonner";
 
 export function TargetList() {
-  console.log("TargetList");
   const [showCaptured, setShowCaptured] = useState(true);
   const [filterQuery, setFilterQuery] = useState("");
   const targets = useLiveQuery(() => db.targets.toArray());

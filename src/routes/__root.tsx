@@ -1,16 +1,17 @@
-import { createRootRoute, Outlet } from "@tanstack/react-router";
+import { createRootRoute } from "@tanstack/react-router";
+import { TargetList } from "@/_components/TargetList";
 // import { TanStackRouterDevtools } from '@tanstack/router-devtools'
 import { Toaster } from "sonner";
 import { Nav } from "@/_components/Nav";
 import { Footer } from "@/_components/Footer";
 
-console.log("Test");
-
 export const Route = createRootRoute({
   component: () => (
     <>
       <Nav />
-      <Outlet />
+      <main>
+        <TargetList />
+      </main>
       <Footer />
       <Toaster
         richColors

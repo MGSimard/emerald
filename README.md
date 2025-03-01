@@ -28,4 +28,9 @@ Emerald est une application de suivi local-first, optimisée pour gérer le prog
 
 ## TASK LIST
 
+- [ ] Find out why index.tsx <main></main> loads later than the \_\_root.tsx layout
+- [ ] This is an issue because <main> is supposed to grow to kick footer to the bottom
+- [ ] It seems like I might have to put <main> in \_\_root.tsx instead and then just render index.tsx as the single component
+- [ ] Or honestly just not use index.tsx at all?
+
 - [ ] List empty message make it better
