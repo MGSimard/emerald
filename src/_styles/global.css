@@ -202,6 +202,7 @@ details ol {
   background-color: var(--clrPrimaryHover);
 }
 .btn:active {
+  filter: brightness(1.1);
 }
 .noselect {
   -webkit-touch-callout: none;
