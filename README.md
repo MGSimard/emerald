@@ -42,3 +42,4 @@ For more info, view my portfolio at [mgsimard.dev](https://mgsimard.dev).
 ## Task List
 
 - [ ] Fix late font loads by preloading/prioritizing them, need to check how to handle this w/ Vite
+- [ ] Consider webp for images, sucks for users wanting to download resources so not sure about that, site is lightweight enough that it doesn't matter

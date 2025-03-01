@@ -5,7 +5,7 @@ import { routeTree } from "@/routeTree.gen";
 import { ThemeContextProvider } from "@/_components/ThemeContext";
 import { Error, NotFound } from "@/_components/NotFoundError";
 import "@/_styles/global.css";
-import "@/_styles/fonts/fonts.css";
+import "@/_styles/fonts.css";
 
 const router = createRouter({
   routeTree,
