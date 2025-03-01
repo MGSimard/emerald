@@ -3,7 +3,6 @@ import tsParser from "@typescript-eslint/parser";
 import reactCompiler from "eslint-plugin-react-compiler";
 
 export default tseslint.config(tseslint.configs.recommendedTypeChecked, tseslint.configs.stylisticTypeChecked, {
-  ignores: ["node_modules", "dist"],
   plugins: {
     "react-compiler": reactCompiler,
   },
