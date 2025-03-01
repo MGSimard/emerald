@@ -162,6 +162,8 @@ button {
   cursor: pointer;
 }
 button:disabled {
+  opacity: 0.5;
+  filter: grayscale(1);
   pointer-events: none;
 }
 [popover] {

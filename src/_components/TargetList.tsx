@@ -18,7 +18,7 @@ export function TargetList() {
         <div className="section-heading">
           <h1>Avis de recherche</h1>
           <div className="section-controls">
-            <input id="search-input" type="search" placeholder="Filtrer..." disabled aria-disabled />
+            <input id="search-input" type="search" disabled aria-disabled />
             <div id="section-controls-right">
               <button className="btn" type="button" disabled aria-disabled>
                 <span>Capturés</span>
