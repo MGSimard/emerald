@@ -29,7 +29,7 @@ export function InfoButton() {
         </div>
 
         {qs.map((q) => (
-          <section>
+          <section key={q.q}>
             <h3> {q.q} </h3>
             <p>{q.a}</p>
           </section>
