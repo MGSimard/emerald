@@ -112,6 +112,9 @@ main:has(.not-found) {
   justify-content: center;
   text-align: center;
 }
+main:has(.not-found) h1 {
+  font-family: var(--GeistMono-and-fallbacks);
+}
 footer {
   padding: 4rem 0;
   text-align: center;
