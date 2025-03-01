@@ -3,7 +3,7 @@ import { useLiveQuery } from "dexie-react-hooks";
 import { db, type Target } from "@/localserver/db";
 import { updateSearchedAt, updateSeenAt, updateCapturedAt } from "@/localserver/actions";
 import { ResetDatabase } from "@/_components/ResetDatabase";
-import { IconSearch, IconSkull, IconCheck, IconEye, IconEyeBlind, IconLink, IconRefresh } from "@/_components/Icons";
+import { IconSearch, IconSkull, IconCheck, IconEye, IconEyeBlind, IconLink } from "@/_components/Icons";
 import { formatDate } from "@/_utils/helpers";
 import { toast } from "sonner";
 
@@ -12,28 +12,7 @@ export function TargetList() {
   const [filterQuery, setFilterQuery] = useState("");
   const targets = useLiveQuery(() => db.targets.toArray());
 
-  if (!targets || targets.length <= 0) {
-    return (
-      <section>
-        <div className="section-heading">
-          <h1>Avis de recherche</h1>
-          <div className="section-controls">
-            <input id="search-input" type="search" disabled aria-disabled />
-            <div id="section-controls-right">
-              <button className="btn" type="button" disabled aria-disabled>
-                <span>Capturés</span>
-                <IconEye />
-              </button>
-              <button className="btn" type="button" disabled aria-disabled>
-                <span>Réinitialiser</span>
-                <IconRefresh />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
+  if (!targets || targets.length <= 0) return null;
 
   const sortedTargets = [...targets].sort((a, b) => {
     return a.level - b.level;
