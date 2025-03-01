@@ -10,7 +10,18 @@ export const Route = createRootRoute({
       <Nav />
       <Outlet />
       <Footer />
-      <Toaster richColors toastOptions={{ className: "sonner-card" }} />
+      <Toaster
+        richColors
+        toastOptions={{
+          className: "sonner-card",
+          style: {
+            fontFamily: "var(--GeistMono-and-fallbacks)",
+            backgroundColor: "var(--clrBg)",
+            border: "1px solid var(--clrBorder)",
+            borderRadius: "0.4rem",
+          },
+        }}
+      />
       {/* <TanStackRouterDevtools /> */}
     </>
   ),
