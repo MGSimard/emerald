@@ -24,8 +24,8 @@
   --clrBorder: hsl(240, 3%, 19%);
 }
 :root[data-theme="light"] {
-  --clrBg: hsl(0, 0%, 98%);
-  --clrBgLight: hsl(0, 0%, 92%);
+  --clrBg: hsl(0, 0%, 92%);
+  --clrBgLight: hsl(0, 0%, 98%);
   --clrHeading: hsl(212, 60%, 20%);
   --clrText: hsl(240, 9%, 30%);
   --clrDetail: hsl(0, 0%, 50%);

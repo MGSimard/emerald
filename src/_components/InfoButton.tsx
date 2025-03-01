@@ -37,14 +37,14 @@ export function InfoButton() {
 const qs = [
   {
     q: "Qu'est-ce Emerald?",
-    a: "Emerald est une application de suivi local-first, optimisée pour gérer le progrès des Avis de recherche dans Dofus.",
+    a: "Emerald est une application de suivi local-first, optimisée pour gérer le progrès des Avis de recherche sur Dofus.",
   },
   {
     q: "Que veux dire 'local-first'?",
-    a: "L'application stocke les données de votre progrès localement, sur votre ordinateur, à l'aide du system 'IndexedDB' de votre navigateur. Votre base de donnée se synchronise périodiquement avec les informations du serveur afin de mettre a jour les données des recherchés en cas de changements.",
+    a: "L'application sauvegarde votre progression localement, à l'aide du system 'IndexedDB' de votre navigateur. Votre base de donnée se synchronise périodiquement avec les informations du serveur afin de mettre a jour les données des recherchés en cas de changements.",
   },
   {
     q: "Est-ce que Emerald sauvegarde mes données?",
-    a: "Non. Votre progression est stockée sur votre ordinateur uniquement.",
+    a: "Aucune de vos données ne sont envoyées à Emerald. Votre progression est stockée sur votre ordinateur uniquement.",
   },
 ];
