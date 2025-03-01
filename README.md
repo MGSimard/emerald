@@ -25,3 +25,7 @@ Emerald est une application de suivi local-first, optimisée pour gérer le prog
 | Sonner          | 2.0.1   | UI Notifications        | [sonner.emilkowal.ski](https://sonner.emilkowal.ski/)     |
 
 </td></tr> </table>
+
+## TASK LIST
+
+- [ ] List empty message make it better

@@ -9,9 +9,7 @@ function PageHome() {
   console.log("PageHome");
   return (
     <>
-      <main>
-        <TargetList />
-      </main>
+      <main>{/* <TargetList /> */}</main>
     </>
   );
 }
