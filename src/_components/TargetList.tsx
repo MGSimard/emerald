@@ -113,12 +113,12 @@ function TargetCard({ target }: { target: Target }) {
       </div>
       <div className="target-card-right">
         <div className="target-metadata">
-          <h3 className="target-name">
+          <h2 className="target-name">
             <a href={wiki} target="_blank">
               {name}
               <IconLink />
             </a>
-          </h3>
+          </h2>
           <span className="target-zone">{zone}</span>
           <span className="target-subzone">{subzone}</span>
         </div>
