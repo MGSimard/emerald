@@ -6,6 +6,7 @@ export const Route = createFileRoute("/")({
 });
 
 function PageHome() {
+  console.log("PageHome");
   return (
     <>
       <main>

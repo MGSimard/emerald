@@ -4,6 +4,8 @@ import { Toaster } from "sonner";
 import { Nav } from "@/_components/Nav";
 import { Footer } from "@/_components/Footer";
 
+console.log("Test");
+
 export const Route = createRootRoute({
   component: () => (
     <>
