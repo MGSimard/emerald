@@ -7,6 +7,7 @@ interface Target {
   level: number;
   zone: string;
   subzone: string;
+  image: string;
   wiki: URL;
   searchedAt: Date | null;
   seenAt: Date | null;

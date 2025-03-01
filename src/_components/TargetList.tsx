@@ -47,7 +47,7 @@ export function TargetList() {
 }
 
 function TargetCard({ target }: { target: Target }) {
-  const { id, name, level, zone, subzone, wiki, searchedAt, seenAt, capturedAt } = target;
+  const { id, name, level, zone, subzone, image, wiki, searchedAt, seenAt, capturedAt } = target;
 
   const handleUpdateSearchedAt = async () => {
     const { success, message } = await updateSearchedAt(id);
@@ -70,11 +70,7 @@ function TargetCard({ target }: { target: Target }) {
   return (
     <li className={`target-card${capturedAt ? " target-captured" : ""}`}>
       <div className="target-card-left">
-        <img
-          className="target-image"
-          alt="a"
-          src="https://www.dofuspourlesnoobs.com/uploads/1/3/0/1/13010384/custom_themes/586567114324766674/files/wanted/monsters/roub-ignolles.png"
-        />
+        <img className="target-image" alt="a" src={image} />
         <span className="target-level">Nv.{level}</span>
       </div>
       <div className="target-card-right">
