@@ -2,9 +2,7 @@
 
 Emerald est une application de suivi local-first, optimisée pour gérer le progrès des Avis de recherche sur Dofus.
 
-## Tech Stack
-
-<table>
+<table style="margin: 0 auto">
 <thead>
 <tr><th><h2>Tech Stack</h2></th></tr>
 </thead>
