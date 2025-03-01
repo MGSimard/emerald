@@ -335,6 +335,7 @@ details ol {
   white-space: nowrap;
 }
 .target-actions button {
+  line-height: 0;
   padding: 0.5rem;
   justify-content: flex-end;
 }

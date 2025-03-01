@@ -48,6 +48,3 @@ db.on("populate", async (tx: Transaction) => {
 
 export type { Target };
 export { db };
-
-// Create a function for users to be able to completely clear and reset their indexedDB data (nuke DB, not just a data reset)
-// They'll automatically get newly populated DB with initialData on next DB call
