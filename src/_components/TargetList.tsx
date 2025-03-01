@@ -108,7 +108,7 @@ function TargetCard({ target }: { target: Target }) {
       <div className="target-card-right">
         <div className="target-metadata">
           <h3 className="target-name">
-            <a href={wiki.toString()} target="_blank">
+            <a href={wiki} target="_blank">
               {name}
               <IconLink />
             </a>
