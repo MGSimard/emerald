@@ -62,7 +62,12 @@ export function TargetList() {
             onChange={(e) => setFilterQuery(e.target.value)}
           />
           <div id="section-controls-right">
-            <button className="btn" type="button" onClick={handleShowCaptured}>
+            <button
+              className="btn"
+              type="button"
+              onClick={handleShowCaptured}
+              aria-label={showCaptured ? "Cacher capturés" : "Afficher Capturés"}
+              title={showCaptured ? "Cacher capturés" : "Afficher Capturés"}>
               <span>Capturés</span>
               {showCaptured ? <IconEye /> : <IconEyeBlind />}
             </button>

@@ -15,7 +15,12 @@ export function ResetDatabase() {
   };
 
   return (
-    <button className="btn" type="button" onClick={handleResetDatabase}>
+    <button
+      className="btn"
+      type="button"
+      onClick={handleResetDatabase}
+      aria-label="Réinitialiser"
+      title="Réinitialiser">
       <span>Réinitialiser</span>
       <IconRefresh />
     </button>

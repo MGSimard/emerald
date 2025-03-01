@@ -7,7 +7,12 @@ export function InfoButton() {
 
   return (
     <>
-      <button type="button" className="question-mark" onClick={() => dialogRef.current?.showModal()}>
+      <button
+        type="button"
+        className="question-mark"
+        onClick={() => dialogRef.current?.showModal()}
+        aria-label="Information"
+        title="Information">
         <IconQuestionMark />
       </button>
       <dialog id="faq-dialog" ref={dialogRef}>
