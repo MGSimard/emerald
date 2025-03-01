@@ -127,8 +127,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--GeistMono-and-fallbacks);
-  font-weight: 400;
+  font-weight: 500;
   color: var(--clrHeading);
 }
 h3,
@@ -157,7 +156,6 @@ button {
   all: unset;
   flex-shrink: 0;
   text-transform: uppercase;
-  font-family: var(--GeistMono-and-fallbacks);
   color: inherit;
   cursor: pointer;
 }
@@ -265,7 +263,7 @@ details ol {
   flex-grow: 1;
   min-width: 0;
   padding: 1rem;
-  font-family: var(--GeistMono-and-fallbacks);
+  font-family: var(--GeistSans-and-fallbacks);
   background: hsl(from var(--clrBgLight) h s calc(l - 2));
   border: 1px solid var(--clrBorder);
   border-radius: 0.4rem;
