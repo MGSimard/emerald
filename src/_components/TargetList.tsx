@@ -3,7 +3,7 @@ import { useLiveQuery } from "dexie-react-hooks";
 import { db, type Target } from "@/localserver/db";
 import { updateSearchedAt, updateSeenAt, updateCapturedAt } from "@/localserver/actions";
 import { ResetDatabase } from "@/_components/ResetDatabase";
-import { IconSearch, IconSkull, IconCheck, IconEye, IconEyeBlind, IconLink } from "@/_components/Icons";
+import { IconSearch, IconSkull, IconCheck, IconEye, IconEyeBlind, IconLink, IconChevronUp } from "@/_components/Icons";
 import { formatDate } from "@/_utils/helpers";
 import { toast } from "sonner";
 

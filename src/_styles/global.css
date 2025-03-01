@@ -106,7 +106,10 @@ main {
   flex-grow: 1;
 }
 footer {
+  padding: 4rem 0;
   text-align: center;
+  color: var(--clrDetail);
+  font-weight: 200;
 }
 section:not([aria-label="Notifications alt+T"]) /* Avoids Sonner's section */ {
   padding: 2rem 0;
@@ -181,6 +184,9 @@ details ol {
   background-color: var(--clrSecondary);
   border: 1px solid var(--clrBorder);
   border-radius: 0.4rem;
+}
+.btn.square {
+  padding: 1rem;
 }
 .btn > * {
   flex-shrink: 0;
