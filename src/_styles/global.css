@@ -177,6 +177,7 @@ details ol {
 .btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   padding: 1rem 2rem;
   font-weight: 700;
@@ -237,8 +238,11 @@ details ol {
 /* TARGET LIST */
 .section-heading {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  row-gap: 1rem;
+  column-gap: 2rem;
   margin-bottom: 1rem;
   padding: 1rem;
   background-color: var(--clrBgLight);
@@ -248,20 +252,32 @@ details ol {
   overflow: hidden;
 }
 .section-controls {
-  flex-shrink: 0;
+  flex-grow: 1;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
   gap: 1rem;
 }
 #search-input {
   all: unset;
-  flex-shrink: 1;
+  flex-grow: 1;
+  min-width: 0;
   padding: 1rem;
+  font-family: var(--GeistMono-and-fallbacks);
+  background: hsl(from var(--clrBgLight) h s calc(l - 2));
   border: 1px solid var(--clrBorder);
   border-radius: 0.4rem;
-  background: hsl(from var(--clrBgLight) h s calc(l - 2));
-  min-width: 0;
-  width: 100%;
+}
+#section-controls-right {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#section-controls-right > * {
+  flex-grow: 1;
+  text-align: center;
 }
 #target-list {
   display: flex;
@@ -367,5 +383,8 @@ details ol {
   }
   .target-actions {
     align-items: stretch;
+  }
+  .section-controls button > *:not(svg) {
+    display: none;
   }
 }

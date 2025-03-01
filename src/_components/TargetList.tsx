@@ -60,10 +60,13 @@ export function TargetList() {
             value={filterQuery}
             onChange={(e) => setFilterQuery(e.target.value)}
           />
-          <button className="btn" type="button" onClick={handleShowCaptured}>
-            Capturés {showCaptured ? <IconEye /> : <IconEyeBlind />}
-          </button>
-          <ResetDatabase />
+          <div id="section-controls-right">
+            <button className="btn" type="button" onClick={handleShowCaptured}>
+              <span>Capturés</span>
+              {showCaptured ? <IconEye /> : <IconEyeBlind />}
+            </button>
+            <ResetDatabase />
+          </div>
         </div>
       </div>
       <ul id="target-list">

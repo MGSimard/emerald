@@ -16,7 +16,8 @@ export function ResetDatabase() {
 
   return (
     <button className="btn" type="button" onClick={handleResetDatabase}>
-      Réinitialiser <IconRefresh />
+      <span>Réinitialiser</span>
+      <IconRefresh />
     </button>
   );
 }
