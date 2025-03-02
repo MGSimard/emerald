@@ -24,7 +24,7 @@
   --clrBorder: hsl(240, 3%, 19%);
 }
 :root[data-theme="light"] {
-  --clrBg: hsl(191, 59%, 30%);
+  --clrBg: hsl(247, 39%, 17%);
   --clrBgLight: hsl(0, 0%, 98%);
   --clrHeading: hsl(66, 100%, 33%);
   --clrText: hsl(240, 9%, 30%);
@@ -347,6 +347,9 @@ details ol {
   bottom: 0;
   left: 50%;
   text-shadow: 0 0.1rem 0.1rem var(--clrBg);
+}
+[data-theme="light"] .target-level {
+  text-shadow: none;
 }
 .target-card-right {
   flex-grow: 1;
