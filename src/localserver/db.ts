@@ -4,10 +4,10 @@ import { toast } from "sonner";
 
 interface Target {
   id: number;
-  name: string;
+  name: { fr: string; en: string };
   level: number;
-  zone: string;
-  subzone: string;
+  zone: { fr: string; en: string };
+  subzone: { fr: string; en: string };
   image: string;
   wiki: string;
   searchedAt: Date | null;
@@ -56,10 +56,13 @@ db.open()
 
           if (existingTarget) {
             const needsUpdate =
-              existingTarget.name !== initialTarget.name ||
+              existingTarget.name.fr !== initialTarget.name.fr ||
+              existingTarget.name.en !== initialTarget.name.en ||
               existingTarget.level !== initialTarget.level ||
-              existingTarget.zone !== initialTarget.zone ||
-              existingTarget.subzone !== initialTarget.subzone ||
+              existingTarget.zone.fr !== initialTarget.zone.fr ||
+              existingTarget.zone.en !== initialTarget.zone.en ||
+              existingTarget.subzone.fr !== initialTarget.subzone.fr ||
+              existingTarget.subzone.en !== initialTarget.subzone.en ||
               existingTarget.image !== initialTarget.image ||
               existingTarget.wiki !== initialTarget.wiki;
 

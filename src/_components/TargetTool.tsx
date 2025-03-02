@@ -6,11 +6,13 @@ import { ResetDatabase } from "@/_components/ResetDatabase";
 import { IconSearch, IconSkull, IconCheck, IconEye, IconEyeBlind, IconLink } from "@/_components/Icons";
 import { formatDate } from "@/_utils/helpers";
 import { toast } from "sonner";
+import { useLang } from "@/_components/LangContext";
 
 export function TargetTool() {
   const [showCaptured, setShowCaptured] = useState(true);
   const [filterQuery, setFilterQuery] = useState("");
   const targets = useLiveQuery(() => db.targets.toArray());
+  const { lang } = useLang();
 
   const handleShowCaptured = () => {
     setShowCaptured(!showCaptured);
@@ -20,12 +22,12 @@ export function TargetTool() {
   return (
     <section>
       <div className="section-heading">
-        <h1>Avis de recherche</h1>
+        <h1>{lang === "fr" ? "Avis de recherche" : "Bounties"}</h1>
         <div className="section-controls">
           <input
             id="search-input"
             type="search"
-            placeholder="Filtrer..."
+            placeholder={lang === "fr" ? "Filtrer..." : "Filter..."}
             value={filterQuery}
             onChange={(e) => setFilterQuery(e.target.value)}
           />
@@ -34,9 +36,25 @@ export function TargetTool() {
               className="btn"
               type="button"
               onClick={handleShowCaptured}
-              aria-label={showCaptured ? "Cacher capturés" : "Afficher Capturés"}
-              title={showCaptured ? "Cacher capturés" : "Afficher Capturés"}>
-              <span>Capturés</span>
+              aria-label={
+                showCaptured
+                  ? lang === "fr"
+                    ? "Cacher capturés"
+                    : "Hide Captured"
+                  : lang === "fr"
+                    ? "Afficher Capturés"
+                    : "Show Captured"
+              }
+              title={
+                showCaptured
+                  ? lang === "fr"
+                    ? "Cacher capturés"
+                    : "Hide Captured"
+                  : lang === "fr"
+                    ? "Afficher Capturés"
+                    : "Show Captured"
+              }>
+              <span>{lang === "fr" ? "Capturés" : "Captured"}</span>
               {showCaptured ? <IconEye /> : <IconEyeBlind />}
             </button>
             <ResetDatabase />
@@ -57,6 +75,8 @@ function TargetList({
   showCaptured: boolean;
   filterQuery: string;
 }) {
+  const { lang } = useLang();
+
   if (!targets || targets.length <= 0) return null;
 
   const sortedTargets = [...targets].sort((a, b) => {
@@ -75,17 +95,23 @@ function TargetList({
       .replace(/[\u0300-\u036f]/g, "");
 
     return (
-      target.name
+      // name.fr, name.en depending on lang
+
+      target.name[lang]
         .normalize("NFKD")
         .toLowerCase()
         .replace(/[\u0300-\u036f]/g, "")
         .includes(normalizedFilterQuery) ||
-      target.zone
+      target.zone[lang]
         .normalize("NFKD")
         .toLowerCase()
         .replace(/[\u0300-\u036f]/g, "")
         .includes(normalizedFilterQuery) ||
-      target.subzone.normalize("NFKD").toLowerCase().includes(normalizedFilterQuery)
+      target.subzone[lang]
+        .normalize("NFKD")
+        .toLowerCase()
+        .replace(/[\u0300-\u036f]/g, "")
+        .includes(normalizedFilterQuery)
     );
   });
 
@@ -99,6 +125,8 @@ function TargetList({
 }
 
 function TargetCard({ target }: { target: Target }) {
+  const { lang } = useLang();
+
   const { id, name, level, zone, subzone, image, wiki, searchedAt, seenAt, capturedAt } = target;
 
   const handleUpdateSearchedAt = async () => {
@@ -128,21 +156,25 @@ function TargetCard({ target }: { target: Target }) {
       <div className="target-card-right">
         <div className="target-metadata">
           <h2 className="target-name">
-            <a href={wiki} target="_blank">
-              {name}
-              <IconLink />
-            </a>
+            {wiki ? (
+              <a href={wiki} target="_blank">
+                {name[lang]}
+                <IconLink />
+              </a>
+            ) : (
+              name[lang]
+            )}
           </h2>
-          <span className="target-zone">{zone}</span>
-          <span className="target-subzone">{subzone}</span>
+          <span className="target-zone">{zone[lang]}</span>
+          <span className="target-subzone">{subzone[lang]}</span>
         </div>
         <div className="target-actions">
           <button
             className="btn"
             type="button"
             onClick={handleUpdateSearchedAt}
-            aria-label="Dernière recherche"
-            title="Dernière recherche">
+            aria-label={lang === "fr" ? "Dernière recherche" : "Last Search"}
+            title={lang === "fr" ? "Dernière recherche" : "Last Search"}>
             {formatDate(searchedAt)}
             <IconSearch />
           </button>
@@ -150,8 +182,8 @@ function TargetCard({ target }: { target: Target }) {
             className="btn"
             type="button"
             onClick={handleUpdateSeenAt}
-            aria-label="Dernièrement vu"
-            title="Dernièrement vu">
+            aria-label={lang === "fr" ? "Dernièrement vu" : "Last Seen"}
+            title={lang === "fr" ? "Dernièrement vu" : "Last Seen"}>
             {formatDate(seenAt)}
             <IconSkull />
           </button>
@@ -159,8 +191,24 @@ function TargetCard({ target }: { target: Target }) {
             className="btn btn-primary"
             type="button"
             onClick={handleUpdateCapturedAt}
-            aria-label={capturedAt ? "Réinitialiser" : "Marquer comme capturé"}
-            title={capturedAt ? "Réinitialiser" : "Marquer comme capturé"}>
+            aria-label={
+              capturedAt
+                ? lang === "fr"
+                  ? "Réinitialiser"
+                  : "Reset"
+                : lang === "fr"
+                  ? "Marquer comme capturé"
+                  : "Mark as Captured"
+            }
+            title={
+              capturedAt
+                ? lang === "fr"
+                  ? "Réinitialiser"
+                  : "Reset"
+                : lang === "fr"
+                  ? "Marquer comme capturé"
+                  : "Mark as Captured"
+            }>
             {formatDate(capturedAt)}
             <IconCheck />
           </button>

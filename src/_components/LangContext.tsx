@@ -9,7 +9,7 @@ interface LangContextTypes {
 const LangContext = createContext<LangContextTypes | undefined>(undefined);
 const LOCAL_STORAGE_KEY = "lang";
 
-export function LanguageContextProvider({ children }: { children: React.ReactNode }) {
+export function LangContextProvider({ children }: { children: React.ReactNode }) {
   // Set default to localStorage -> system preference -> French default
   const [lang, setLangState] = useState<LangTypes>(() => {
     try {

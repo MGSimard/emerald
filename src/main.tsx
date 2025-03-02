@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { routeTree } from "@/routeTree.gen";
 import { ThemeContextProvider } from "@/_components/ThemeContext";
+import { LangContextProvider } from "@/_components/LangContext";
 import { Error, NotFound } from "@/_components/NotFoundError";
 import "@/_styles/global.css";
 import "@/_styles/fonts.css";
@@ -28,7 +29,9 @@ if (!rootElement.innerHTML) {
   root.render(
     <StrictMode>
       <ThemeContextProvider>
-        <RouterProvider router={router} />
+        <LangContextProvider>
+          <RouterProvider router={router} />
+        </LangContextProvider>
       </ThemeContextProvider>
     </StrictMode>
   );
