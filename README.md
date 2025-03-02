@@ -41,4 +41,5 @@ For more info, view my portfolio at [mgsimard.dev](https://mgsimard.dev).
 
 ## Task List
 
+- [ ] Add english translation (en/fr keys for relevant columns, access .fr or .en depending on selected language)
 - [ ] Consider webp for images, sucks for users wanting to download resources so not sure about that, site is lightweight enough that it doesn't matter
