@@ -7,11 +7,58 @@ import { IconSearch, IconSkull, IconCheck, IconEye, IconEyeBlind, IconLink } fro
 import { formatDate } from "@/_utils/helpers";
 import { toast } from "sonner";
 
-export function TargetList() {
+export function TargetTool() {
   const [showCaptured, setShowCaptured] = useState(true);
   const [filterQuery, setFilterQuery] = useState("");
   const targets = useLiveQuery(() => db.targets.toArray());
 
+  const handleShowCaptured = () => {
+    setShowCaptured(!showCaptured);
+    toast.success(`Avis capturés ${showCaptured ? "masqué" : "affiché"}.`);
+  };
+
+  console.log(targets);
+
+  return (
+    <section>
+      <div className="section-heading">
+        <h1>Avis de recherche</h1>
+        <div className="section-controls">
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Filtrer..."
+            value={filterQuery}
+            onChange={(e) => setFilterQuery(e.target.value)}
+          />
+          <div id="section-controls-right">
+            <button
+              className="btn"
+              type="button"
+              onClick={handleShowCaptured}
+              aria-label={showCaptured ? "Cacher capturés" : "Afficher Capturés"}
+              title={showCaptured ? "Cacher capturés" : "Afficher Capturés"}>
+              <span>Capturés</span>
+              {showCaptured ? <IconEye /> : <IconEyeBlind />}
+            </button>
+            <ResetDatabase />
+          </div>
+        </div>
+      </div>
+      <TargetList targets={targets} showCaptured={showCaptured} filterQuery={filterQuery} />
+    </section>
+  );
+}
+
+function TargetList({
+  targets,
+  showCaptured,
+  filterQuery,
+}: {
+  targets: Target[] | undefined;
+  showCaptured: boolean;
+  filterQuery: string;
+}) {
   if (!targets || targets.length <= 0) return null;
 
   const sortedTargets = [...targets].sort((a, b) => {
@@ -44,43 +91,12 @@ export function TargetList() {
     );
   });
 
-  const handleShowCaptured = () => {
-    setShowCaptured(!showCaptured);
-    toast.success(`Avis capturés ${showCaptured ? "masqué" : "affiché"}.`);
-  };
-
   return (
-    <section>
-      <div className="section-heading">
-        <h1>Avis de recherche</h1>
-        <div className="section-controls">
-          <input
-            id="search-input"
-            type="search"
-            placeholder="Filtrer..."
-            value={filterQuery}
-            onChange={(e) => setFilterQuery(e.target.value)}
-          />
-          <div id="section-controls-right">
-            <button
-              className="btn"
-              type="button"
-              onClick={handleShowCaptured}
-              aria-label={showCaptured ? "Cacher capturés" : "Afficher Capturés"}
-              title={showCaptured ? "Cacher capturés" : "Afficher Capturés"}>
-              <span>Capturés</span>
-              {showCaptured ? <IconEye /> : <IconEyeBlind />}
-            </button>
-            <ResetDatabase />
-          </div>
-        </div>
-      </div>
-      <ul id="target-list">
-        {searchFilteredTargets.map((target) => (
-          <TargetCard key={target.id} target={target} />
-        ))}
-      </ul>
-    </section>
+    <ul id="target-list">
+      {searchFilteredTargets.map((target) => (
+        <TargetCard key={target.id} target={target} />
+      ))}
+    </ul>
   );
 }
 

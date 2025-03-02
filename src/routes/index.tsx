@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { TargetList } from "@/_components/TargetList";
+import { TargetTool } from "@/_components/TargetTool";
 
 export const Route = createFileRoute("/")({
-  component: PageHome,
+  component: PageIndex,
 });
 
-function PageHome() {
-  return <TargetList />;
+function PageIndex() {
+  return <TargetTool />;
 }
