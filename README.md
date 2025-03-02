@@ -41,4 +41,5 @@ For more info, view my portfolio at [mgsimard.dev](https://mgsimard.dev).
 
 ## Task List
 
+- [ ] Found out artificial delay was due to autoCodeSplitting being turned on by the cli setup, turned it off, now need to separate data from header thing so I can load the header instantly
 - [ ] Consider webp for images, sucks for users wanting to download resources so not sure about that, site is lightweight enough that it doesn't matter
