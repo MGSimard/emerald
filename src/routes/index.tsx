@@ -6,5 +6,7 @@ export const Route = createFileRoute("/")({
 });
 
 function PageIndex() {
+  console.log(navigator.languages);
+
   return <TargetTool />;
 }
