@@ -70,7 +70,7 @@ const qsEN = [
   },
   {
     q: "What does 'local-first' mean?",
-    a: "The application saves your progress locally, using the 'IndexedDB' system of your browser. Your database periodically synchronizes with server to update bounty data in case of changes.",
+    a: "The application saves your progress locally, using the 'IndexedDB' system of your browser. Your database periodically synchronizes with the server to update bounty data in case of changes.",
   },
   {
     q: "Does Emerald save my data?",
