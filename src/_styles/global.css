@@ -161,6 +161,7 @@ ol {
 button {
   all: unset;
   flex-shrink: 0;
+  text-align: center;
   text-transform: uppercase;
   color: inherit;
   cursor: pointer;
@@ -201,9 +202,6 @@ details ol {
 }
 .btn.square {
   padding: 1rem;
-}
-.btn > * {
-  flex-shrink: 0;
 }
 .btn:hover,
 .btn:focus-visible {
@@ -278,11 +276,8 @@ details ol {
   flex-grow: 1;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 1rem;
-}
-#section-controls-right > * {
-  flex-grow: 1;
-  text-align: center;
 }
 #target-list {
   display: flex;
@@ -438,8 +433,5 @@ dialog h3 {
   }
   .target-actions {
     align-items: stretch;
-  }
-  .section-controls button > *:not(svg) {
-    display: none;
   }
 }

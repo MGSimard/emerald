@@ -7,6 +7,7 @@ import { IconSearch, IconSkull, IconCheck, IconEye, IconEyeBlind, IconLink } fro
 import { formatDate } from "@/_utils/helpers";
 import { toast } from "sonner";
 import { useLang } from "@/_components/LangContext";
+import { SoftReset } from "./SoftReset";
 
 export function TargetTool() {
   const [showCaptured, setShowCaptured] = useState(true);
@@ -33,7 +34,7 @@ export function TargetTool() {
           />
           <div id="section-controls-right">
             <button
-              className="btn"
+              className="btn square"
               type="button"
               onClick={handleShowCaptured}
               aria-label={
@@ -54,9 +55,9 @@ export function TargetTool() {
                     ? "Afficher Capturés"
                     : "Show Captured"
               }>
-              <span>{lang === "fr" ? "Capturés" : "Captured"}</span>
               {showCaptured ? <IconEye /> : <IconEyeBlind />}
             </button>
+            <SoftReset />
             <ResetDatabase />
           </div>
         </div>

@@ -41,4 +41,5 @@ For more info, view my portfolio at [mgsimard.dev](https://mgsimard.dev).
 
 ## Task List
 
+- [x] Add a soft-reset button that only resets searched & seen columns, even I've been wanting to reset those between sessions
 - [ ] Consider webp for images, sucks for users wanting to download resources so not sure about that, site is lightweight enough that it doesn't matter

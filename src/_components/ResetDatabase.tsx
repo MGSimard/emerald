@@ -1,5 +1,5 @@
 import { resetDatabase } from "@/localserver/actions";
-import { IconRefresh } from "@/_components/Icons";
+import { IconTrash } from "@/_components/Icons";
 import { toast } from "sonner";
 import { useLang } from "@/_components/LangContext";
 
@@ -9,8 +9,8 @@ export function ResetDatabase() {
   const handleResetDatabase = async () => {
     const confirmed = confirm(
       lang === "fr"
-        ? "Êtes vous sûr de vouloir réinitialiser la base de données ? Cette action est irréversible."
-        : "Are you sure you want to reset the database? This action is irreversible."
+        ? "Êtes vous certain de vouloir réinitialiser votre progression?\n\nCette action est irréversible.\n\n(HARD RESET)"
+        : "Are you sure you want to reset your progress?\n\nThis action is irreversible.\n\n(HARD RESET)"
     );
     if (!confirmed) return;
 
@@ -21,13 +21,12 @@ export function ResetDatabase() {
 
   return (
     <button
-      className="btn"
+      className="btn square"
       type="button"
       onClick={handleResetDatabase}
-      aria-label={lang === "fr" ? "Réinitialiser" : "Reset"}
-      title={lang === "fr" ? "Réinitialiser" : "Reset"}>
-      <span>{lang === "fr" ? "Réinitialiser" : "Reset"}</span>
-      <IconRefresh />
+      aria-label={lang === "fr" ? "Réinitialisation totale" : "HARD RESET"}
+      title={lang === "fr" ? "Réinitialisation totale" : "HARD RESET"}>
+      <IconTrash />
     </button>
   );
 }

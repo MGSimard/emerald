@@ -57,3 +57,14 @@ export async function resetDatabase() {
     return { success: false, message: err instanceof Error ? err.message : "ERREUR INCONNUE." };
   }
 }
+
+// Reset searched & seen columns
+export async function softReset() {
+  try {
+    await db.targets.toCollection().modify({ searchedAt: null, seenAt: null, updatedAt: new Date() });
+
+    return { success: true, message: "Réinitialisation légère effectuée (recherchés & observés)." };
+  } catch (err: unknown) {
+    return { success: false, message: err instanceof Error ? err.message : "ERREUR INCONNUE." };
+  }
+}
