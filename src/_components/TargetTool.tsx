@@ -17,8 +17,6 @@ export function TargetTool() {
     toast.success(`Avis capturés ${showCaptured ? "masqué" : "affiché"}.`);
   };
 
-  console.log(targets);
-
   return (
     <section>
       <div className="section-heading">
