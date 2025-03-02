@@ -24,9 +24,9 @@
   --clrBorder: hsl(240, 3%, 19%);
 }
 :root[data-theme="light"] {
-  --clrBg: hsl(0, 0%, 92%);
+  --clrBg: hsl(191, 59%, 30%);
   --clrBgLight: hsl(0, 0%, 98%);
-  --clrHeading: hsl(212, 60%, 20%);
+  --clrHeading: hsl(66, 100%, 33%);
   --clrText: hsl(240, 9%, 30%);
   --clrDetail: hsl(0, 0%, 50%);
   --clrBorder: hsl(240, 3%, 80%);
@@ -91,6 +91,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 1rem;
+  color: white;
 }
 .question-mark,
 .theme-toggle {
