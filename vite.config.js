@@ -15,7 +15,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    TanStackRouterVite({ autoCodeSplitting: true }),
+    TanStackRouterVite(),
     viteReact({
       babel: {
         plugins: [["babel-plugin-react-compiler", ReactCompilerConfig]],
