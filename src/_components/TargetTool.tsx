@@ -94,10 +94,7 @@ function TargetList({
       .normalize("NFKD")
       .toLowerCase()
       .replace(/[\u0300-\u036f]/g, "");
-
     return (
-      // name.fr, name.en depending on lang
-
       target.name[lang]
         .normalize("NFKD")
         .toLowerCase()
