@@ -7,7 +7,7 @@ export function Nav() {
   const { lang, toggleLang } = useLang();
 
   return (
-    <nav>
+    <nav className="noselect">
       <Link to="/" id="nav-logo">
         <img src="/metadata/favicon.svg" alt="Logo" />
         <span>EMERALD</span>
