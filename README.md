@@ -41,6 +41,5 @@ For more info, view my portfolio at [mgsimard.dev](https://mgsimard.dev).
 
 ## Task List
 
-- [x] Add a soft-reset button that only resets searched & seen columns, even I've been wanting to reset those between sessions
 - [ ] Consider webp for images, sucks for users wanting to download resources so not sure about that, site is lightweight enough that it doesn't matter
 - [ ] There's a world where the only thing in localDB is IDs + user tracked data, that way I could simplify multi-language setup by matching localDB ID with the mob data JSON for rendering, rather than syncing the totality of the JSON into the localDB. It's not that big of a deal but if for some god forsaken reason I decide to support more than two languages, the localDB would start looking like shit with every single language version of monster names, locations etc.

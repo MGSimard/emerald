@@ -76,7 +76,7 @@ db.open()
                 wiki: initialTarget.wiki,
                 updatedAt: new Date(),
               });
-              toast.success("Base de données synchronisée.");
+              console.log("Mob data synchronized.");
             }
           } else {
             await db.targets.add({
@@ -86,23 +86,23 @@ db.open()
               capturedAt: null,
               updatedAt: new Date(),
             });
-            toast.success("Base de données synchronisée.");
+            console.log("Mob data synchronized.");
           }
         }
 
         for (const [id] of dbTargetsMap.entries()) {
           if (!initialDataMap.has(id)) {
             await db.targets.delete(id);
-            toast.success("Base de données synchronisée.");
+            console.log("Mob data synchronized.");
           }
         }
       });
     } catch (_) {
-      throw new Error("ERROR: La base de données n'a pas pu être synchronisée.");
+      throw new Error("ERROR: Mob data synchronization failed.");
     }
   })
   .catch((_) => {
-    toast.error("ERROR: La base de données n'a pas pu être synchronisée.");
+    toast.error("ERROR: Mob data synchronization failed.");
   });
 
 export type { Target };
