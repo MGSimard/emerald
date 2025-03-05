@@ -31,6 +31,7 @@ export function TargetTool() {
             placeholder={lang === "fr" ? "Filtrer..." : "Filter..."}
             value={filterQuery}
             onChange={(e) => setFilterQuery(e.target.value)}
+            spellCheck="false"
           />
           <div id="section-controls-right">
             <button
