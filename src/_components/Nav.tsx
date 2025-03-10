@@ -9,7 +9,7 @@ export function Nav() {
   return (
     <nav className="noselect">
       <Link to="/" id="nav-logo">
-        <img src="/metadata/favicon.svg" alt="Logo" />
+        <img src="/metadata/icon.svg" alt="Logo" />
         <span>EMERALD</span>
       </Link>
       <div id="nav-controls">
